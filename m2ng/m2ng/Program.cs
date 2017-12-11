@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 namespace m2ng
 {
     class Program
     {
+     
         static void Main(string[] args)
         {
+           
+//C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\Bitmap1.bmp
             Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
             karakter kasutaja = new karakter();
             kasutaja.nimi = Console.ReadLine();
@@ -18,8 +23,10 @@ namespace m2ng
             Console.WriteLine("Mis soost te olete?");
             kasutaja.sugu = Console.ReadLine();
 
-            Console.WriteLine("*Raadio*: Tere hommikust, kell on 07:03. Tõuse ja sära!")
-            Console.WriteLine()
+            Console.WriteLine("*Raadio*: Tere hommikust, kell on 07:03. Tõuse ja sära!");
+            Console.WriteLine("");
         }
+
+        
     }
 }
