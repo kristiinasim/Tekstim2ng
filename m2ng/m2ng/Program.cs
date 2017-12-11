@@ -13,8 +13,14 @@ namespace m2ng
      
         static void Main(string[] args)
         {
+            Application.Run(new Form1());
+            //or -------------
+            Form1 f = new Form1();
+            f.Show();
+            
            
-//C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\Bitmap1.bmp
+
+            //C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\Bitmap1.bmp
             Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
             karakter kasutaja = new karakter();
             kasutaja.nimi = Console.ReadLine();
