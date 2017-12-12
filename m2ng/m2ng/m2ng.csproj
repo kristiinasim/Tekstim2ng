@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="dialoog.cs" />
     <Compile Include="karakter.cs" />
+    <Compile Include="koobas.cs" />
     <Compile Include="lennujaam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
