@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-namespace UserControl1
+
+namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
@@ -33,10 +34,14 @@ namespace UserControl1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void Alusta_Click(object sender, EventArgs e)
         {
-          Process.Start(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\\m2ng\m2ng\m2ng.csproj");
-         
+            Process p = new Process();
+            Process.Start(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\bin\Debug\m2ng.exe");
+            this.Close();
         }
     }
 }
+
