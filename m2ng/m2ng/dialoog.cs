@@ -11,10 +11,10 @@ namespace m2ng
         public static void Dia()
         {
             Console.WriteLine("*Mina*: Eee..Jah, kes see on?");
-            Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle hullumajast, Dell'i linnast, teie kaksikuga seoses.");
-            Console.WriteLine("*Helistaja*: Nimelt on teie kaksikul, Alex Lee Epp'il lõpetatud rohtude toetamine ning ta ravikuur kestab veel 2 kuud.");
+            Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle psühiaatrikliinikust, Dell'i linnast, teie kaksikuga seoses.");
+            Console.WriteLine("*Helistaja*: Nimelt on teie kaksikul, Alex Lee Epp'il avastatud eluohtlik haigus, mille ostmiseks meil õigust ja rahalist toetust ei ole.");
             Console.WriteLine("*Helistaja*: Kuna tal ei ole luba välja ning endal sissetulekut ei ole, siis ei saa ta rohtu soetada, seega me palume teil talle need rohud välja osta.");
-            Console.WriteLine("*Mina*: Rohud.. Hullumaja.. Mida? Millal ta sinna sattus? Ahah, *kirjutan* Dell'is hullumajas, Ruthle hullumaja jah? *lõpetan kirjutamise* Selge, lendan täna sinna.");
+            Console.WriteLine("*Mina*: Rohud.. Psühiaatrikliinik.. Mida? Millal ta sinna sattus? Ahah, *kirjutan* Dell'is.., Ruthle kliinik jah? *lõpetan kirjutamise* Selge, lendan täna sinna.");
             Console.WriteLine("*Helistaja*: Aitäh teile.");
         }
 
@@ -34,9 +34,10 @@ namespace m2ng
             telk6n1:
             Console.WriteLine("*Telefon heliseb uuesti.* 'vasta' või 'ignoreeri'");
             string telk6n1 = Console.ReadLine();
+
             if (telk6n1 == "vasta")
             {
-                Console.WriteLine("*Helistaja*: Tere, kas ma räägin " + kasutaja.nimi + "-ga?");
+                Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
                 dialoog.Dia();
             }
 
@@ -48,14 +49,14 @@ namespace m2ng
                 string telk6n2 = Console.ReadLine();
                 if (telk6n2 == "vasta")
                 {
-                    Console.WriteLine("*Helistaja*: Tere, kas ma räägin " + kasutaja.nimi + "-ga?");
+                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
                     dialoog.Dia();
                 }
 
                 else if (telk6n2 == "viskan telefoni aknast välja")
                 {
                     Console.WriteLine("*Hakkan telefoni aknast välja viskama, kuid viimasel hetkel mõtlen ümber ning vastan kõnele.*");
-                    Console.WriteLine("*Helistaja*: Tere, kas ma räägin " + kasutaja.nimi + "-ga?");
+                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
                     dialoog.Dia();
                 }
 
