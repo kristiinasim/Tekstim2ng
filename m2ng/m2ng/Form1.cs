@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 namespace m2ng
 {
     public partial class Form1 : Form
@@ -33,6 +33,10 @@ namespace m2ng
 
         }
 
-      
+        private void button1_Click(object sender, EventArgs e)
+        {
+          Process.Start(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\city2.jpg");
+         
+        }
     }
 }
