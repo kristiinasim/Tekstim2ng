@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,6 @@ namespace m2ng
         public string nimi { get; set; }
         public int vanus { get; set; }
         public string sugu { get; set; }
-
-
     }
 }
 

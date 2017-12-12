@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dialoog.cs" />
+    <Compile Include="Invetuur.cs" />
     <Compile Include="karakter.cs" />
     <Compile Include="lennujaam.cs" />
     <Compile Include="Program.cs" />
