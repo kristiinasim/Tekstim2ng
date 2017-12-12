@@ -11,9 +11,15 @@ namespace m2ng
         static void Main(string[] args)
         {
             //Ärkamisest telefonikõnele vastamiseni
-            dialoog.Dialo();
+            // dialoog.Dialo();
             //Telefonikõnest külani
-            lennujaam.Lennujaam();
+            // lennujaam.Lennujaam();
+
+            TextFile majake = new TextFile(@"C:\code\Katrin\Tekstim2ng\m2ng\m2ng\info\ascii_maja.txt");
+            Console.WriteLine(majake.getText());
+
+            Console.ReadLine();
+
             
         }
     }
