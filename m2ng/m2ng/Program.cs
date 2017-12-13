@@ -17,37 +17,43 @@ namespace m2ng
 
             path = @"../../../Invetory.txt";
             File.Delete(path);
-            //ASCII
-            string pilt = System.IO.File.ReadAllText(@"../../../../pilt.txt");
-            Console.WriteLine(pilt);
+            ////ASCII
+            //Console.ForegroundColor = ConsoleColor.Yellow;
+            //string pilt = System.IO.File.ReadAllText(@"../../../../pilt.txt");
+            //Console.WriteLine(pilt);
+            //Console.ForegroundColor = ConsoleColor.Green;
+            //Console.WriteLine("Et mängus edasi liikuda, pead vajutama suvalist klahvi.");
+            //Console.WriteLine("Välja arvatud, kui tuleb kirjutada vastus.");
+            //Console.ResetColor();
+            //Console.ReadKey();
+            //Console.Clear();
 
             //Ärkamisest telefonikõnele vastamiseni
             dialoog.Dialo();
             //Telefonikõnest külani
+            lennujaam.JooKohvi();
             lennujaam.Lennujaam();
-            Console.Clear();
 
-            // !LÄHEB APTEEKI!
-            // !OTSIB TÖÖD + RAHA
-            // !HULLUMAJA OSA!
-            // !KOOPA OSA!
-            // !Tagasi külas!
-            //Lennujaamas sees ning linnas:
-            linna.linnas();
-            //Linnas. Alates teisest karakterist.
-            linnas.linn();
-            //Apteek
-            apteek.apt();
+            //// !LÄHEB APTEEKI!
+            //// !OTSIB TÖÖD + RAHA
+            //// !HULLUMAJA OSA!
+            //// !KOOPA OSA!
+            //// !Tagasi külas!
+            ////Lennujaamas sees ning linnas:
+            //linna.linnas();
+            ////Linnas. Alates teisest karakterist.
+            //linna.linn();
+            ////Apteek
+            //apteek.apt();
 
-            //Pood
-            TextFile ascii = new TextFile(@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
-            Console.WriteLine(ascii.getText());
-            //Apteek ja rohud
-            TextFile aptjek = new TextFile(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\aptjek.txt");
-            Console.WriteLine(aptjek.getText());
+            ////Pood
+            //TextFile ascii = new TextFile(@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
+            //Console.WriteLine(ascii.getText());
+            ////Apteek ja rohud
+            //TextFile aptjek = new TextFile(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\aptjek.txt");
+            //Console.WriteLine(aptjek.getText());
 
-            Console.ReadLine();
-
+            //Console.ReadLine();
             //KOOBAS
             Koobas.Kooba();
         }
