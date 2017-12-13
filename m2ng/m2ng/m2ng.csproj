@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="apteek.cs" />
     <Compile Include="dialoog.cs" />
+    <Compile Include="Ekraan.cs" />
     <Compile Include="Invetuur.cs" />
     <Compile Include="karakter.cs" />
     <Compile Include="koobas.cs" />
@@ -61,7 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,7 +70,6 @@
     <Content Include="info\aptjek.txt" />
     <Content Include="info\ascii.txt" />
     <Content Include="info\raha.txt" />
-
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
