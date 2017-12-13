@@ -17,13 +17,17 @@ namespace m2ng
 
             path = @"../../../Invetory.txt";
             File.Delete(path);
+
             ////ASCII
             string pilt = System.IO.File.ReadAllText(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\pilt.txt");
             Console.WriteLine(pilt);
 
+
+
             //Ärkamisest telefonikõnele vastamiseni
             dialoog.Dialo();
             //Telefonikõnest külani
+
             lennujaam.Lennujaam();
 
             // !LÄHEB APTEEKI!
@@ -31,6 +35,9 @@ namespace m2ng
             // !HULLUMAJA OSA!
             // !KOOPA OSA!
             // !Tagasi külas!
+
+             
+
             //Lennujaamas sees ning linnas:
             linna.linnas();
             //Linnas. Alates teisest karakterist.
@@ -39,10 +46,13 @@ namespace m2ng
             apteek.apt();
 
             //Pood
-            TextFile ascii = new TextFile(@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
+            //Console.WriteLine("PATH : {0}", Directory.GetCurrentDirectory());
+            
+            TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
             Console.WriteLine(ascii.getText());
             //Apteek ja rohud
-            TextFile aptjek = new TextFile(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\aptjek.txt");
+            
+            TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
             Console.WriteLine(aptjek.getText());
 
             Console.ReadLine();
