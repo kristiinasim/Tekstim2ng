@@ -18,6 +18,11 @@ namespace m2ng
             dialoog.Dialo();
             //Telefonikõnest külani
             lennujaam.Lennujaam();
+            // !LÄHEB APTEEKI!
+            // !OTSIB TÖÖD + RAHA
+            // !HULLUMAJA OSA!
+            // !KOOPA OSA!
+            // !Tagasi külas!
         }
     }
 }

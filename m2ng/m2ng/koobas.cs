@@ -98,24 +98,24 @@ namespace m2ng
             path = @"../../../Invetory.txt";
             File.Delete(path);
             //-esimene suuna valik
-            Console.WriteLine("Kas soovite minna vasakule või paremale?");
+            Console.WriteLine("Läbi luugi oled sattunud koopasse.Soovite minna vasakule või paremale?");
             string suund = Console.ReadLine();
             if (suund == "vasakule")
 
             {
                 alg:
-                Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                Console.WriteLine("Vasakule või paremale?");
                 string suund2 = Console.ReadLine();
                 if (suund2 == "vasakule")
                 {
                     
 
                     //politsei - KRISTEL
-                    Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                    Console.WriteLine("Kas nüüd vasakule või paremale?");
                     string suund4 = Console.ReadLine();
                     if (suund4 == "vasakule")
                     {
-                        Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                        Console.WriteLine("Kas soovite minna ilusamale teele ehk vasakule või parem viib alati paremale?");
                         string suund6 = Console.ReadLine();
                         if (suund6 == "vasakule")
                         {
@@ -127,7 +127,7 @@ namespace m2ng
                         {
                             Koobas.Kypsisepakk();
                             //puhkeala
-                            Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                            Console.WriteLine("Kui paremale viivad jäljed siis kuhu sa lähed?");
                             string suund8 = Console.ReadLine();
                             if (suund8 == "vasakule")
                             {
@@ -154,13 +154,13 @@ namespace m2ng
                 {
                     
                     //vanemate elajate ründamine - KRISTEL
-                    Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                    Console.WriteLine("Võitlus võidetud!Hea töö!Valikud on endiselt vasakule või paremale? :D ");
                     string suund5 = Console.ReadLine();
                     if (suund5 == "vasakule")
                     {
                         Koobas.Kypsisepakk();
                         //puhkeala
-                        Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                        Console.WriteLine("Raske valik, kas vasakule või paremale?");
                         string suund8 = Console.ReadLine();
                         if (suund8 == "vasakule")
                         {
@@ -186,10 +186,11 @@ namespace m2ng
 
             else if (suund == "paremale")
             {
-                
+
                 //vanemate elajate ründamine - KRISTEL
                 algu:
-                Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                Console.WriteLine("    d*_*b   ");
+                Console.WriteLine("Valikud on endiselt vasakule või paremale?");
                 string suund3 = Console.ReadLine();
                 if (suund3 == "vasakule")
                 {
@@ -201,7 +202,7 @@ namespace m2ng
                     {
                         Koobas.Sokolaad();
                         //puhkeala
-                        Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                        Console.WriteLine("Vajadus minna vasakule või paremale?");
                         string suund8 = Console.ReadLine();
                         if (suund8 == "vasakule")
                         {
@@ -229,7 +230,7 @@ namespace m2ng
                 else if (suund3 == "paremale")
                 {
                     Koobas.Sokolaad();
-                    Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                    Console.WriteLine("Pigem vasakule või paremale?");
                     string suund7 = Console.ReadLine();
                     if (suund7 == "vasakule")
                     {
@@ -243,7 +244,7 @@ namespace m2ng
                     {
 
                         //politsei- KRISTEL
-                        Console.WriteLine("Kas soovite minna vasakule või paremale?");
+                        Console.WriteLine("Sellest käigust sõltub kui pikaks mu tee nüüd läheb. Tee õige otsus!Kas soovid minna vasakule/paremale?");
                         string suund9 = Console.ReadLine();
                         if (suund9 == "vasakule")
                         {
