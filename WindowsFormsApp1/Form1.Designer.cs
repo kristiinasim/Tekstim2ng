@@ -29,28 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Alusta = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Alusta
-            // 
-            this.Alusta.Location = new System.Drawing.Point(138, 316);
-            this.Alusta.Name = "Alusta";
-            this.Alusta.Size = new System.Drawing.Size(328, 58);
-            this.Alusta.TabIndex = 1;
-            this.Alusta.Text = "Alusta";
-            this.Alusta.UseVisualStyleBackColor = true;
-            this.Alusta.Click += new System.EventHandler(this.Alusta_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, -10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(945, 555);
+            this.pictureBox1.Size = new System.Drawing.Size(982, 647);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -74,7 +63,6 @@
             this.ClientSize = new System.Drawing.Size(940, 548);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Alusta);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -83,7 +71,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button Alusta;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
     }
