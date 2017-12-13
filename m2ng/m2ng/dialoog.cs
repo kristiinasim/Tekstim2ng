@@ -25,7 +25,7 @@ namespace m2ng
             kasutaja.nimi = Console.ReadLine();
             Console.WriteLine("Nüüd sisestage palun vanus.");
             kasutaja.vanus = int.Parse(Console.ReadLine());
-            Console.WriteLine("Mis soost te olete?");
+            Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!");
             kasutaja.sugu = Console.ReadLine();
 
             Console.WriteLine("*Ärkad telefoni helina peale. Vaatad kella, kell on 7:00, otusustad kõnet ignoreerida.*");
