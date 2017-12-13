@@ -17,17 +17,23 @@ namespace m2ng
 
             path = @"../../../Invetory.txt";
             File.Delete(path);
+            ////ASCII
+            //string pilt = System.IO.File.ReadAllText(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\pilt.txt");
+            //Console.WriteLine(pilt);
 
-            
-                //ASCII
-                string pilt = System.IO.File.ReadAllText(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\pilt.txt");
-                Console.WriteLine(pilt);
+            //Ärkamisest telefonikõnele vastamiseni
+            dialoog.Dialo();
+            //Telefonikõnest külani
+            lennujaam.Lennujaam();
+            //Lennujaamas sees ning linnas:
+            linna.linnas();
+            //Linnas. Alates teisest karakterist.
+            linnas.linn();
+            //Apteek
+            apteek.apt();
 
-                //Ärkamisest telefonikõnele vastamiseni
-                dialoog.Dialo();
-                //Telefonikõnest külani
-                lennujaam.Lennujaam();
 
+<<<<<<< HEAD
                 //Lennujaamas sees ning linnas:
                 linna.linnas();
                 //Linnas. Alates teisest karakterist.
@@ -48,8 +54,16 @@ namespace m2ng
 
         }
 
+=======
+>>>>>>> ecd92a316d6c19ea8c0b0caa25bd92bb5e7d4197
 
+            //KOOBAS
+            Koobas.Kooba();
 
         }
+
+
+
     }
+}
 
