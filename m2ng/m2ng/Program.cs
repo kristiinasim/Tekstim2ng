@@ -22,9 +22,10 @@ namespace m2ng
             //Pood
             TextFile ascii = new TextFile (@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
             Console.WriteLine(ascii.getText());
-            //Apteek
+            //Apteek ja rohud
             TextFile aptjek = new TextFile(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\aptjek.txt");
             Console.WriteLine(aptjek.getText());
+            
             Console.ReadLine();
 
         }
