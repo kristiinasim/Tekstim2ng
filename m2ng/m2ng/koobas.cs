@@ -10,7 +10,6 @@ namespace m2ng
     class Koobas:karakter
     {
         public static string path;
-        public static string StaPath;
         //9 toitu. 4 vett, 2 sokolaadi, 2 pakki kypsist, 1 coca cola
         public static void Vesi()
         {

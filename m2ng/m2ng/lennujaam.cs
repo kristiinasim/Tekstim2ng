@@ -18,6 +18,10 @@ namespace m2ng
             Console.ReadLine();
             Console.WriteLine("*Lõpuks lennukilt maas, lennujaamas, kell on 12:27, nüüd on vaja leida apteek, osta rohi ja minna kaksikule külla. Mis saab valesti minna?");
             Console.WriteLine("------------------");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("<<<'''Vajuta suvalist klahvi, et edasi minna!'''>>>");
+            Console.ResetColor();
+            Console.ReadKey();
         }
     }
 }
