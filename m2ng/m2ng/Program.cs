@@ -12,7 +12,10 @@ namespace m2ng
     {
 
         static void Main(string[] args)
-        { 
+        {
+            //ASCII
+            string pilt = System.IO.File.ReadAllText(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\pilt.txt");
+            Console.WriteLine(pilt);
             //Ärkamisest telefonikõnele vastamiseni
             dialoog.Dialo();
             //Telefonikõnest külani
