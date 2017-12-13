@@ -17,8 +17,8 @@ namespace m2ng
             path = @"../../../Invetory.txt";
             File.Delete(path);
             ////ASCII
-            //string pilt = System.IO.File.ReadAllText(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\pilt.txt");
-            //Console.WriteLine(pilt);
+            string pilt = System.IO.File.ReadAllText(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\pilt.txt");
+            Console.WriteLine(pilt);
 
             //Ärkamisest telefonikõnele vastamiseni
             dialoog.Dialo();
