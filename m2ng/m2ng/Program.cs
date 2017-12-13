@@ -32,17 +32,6 @@ namespace m2ng
             //Apteek
             apteek.apt();
 
-
-<<<<<<< HEAD
-                //Lennujaamas sees ning linnas:
-                linna.linnas();
-                //Linnas. Alates teisest karakterist.
-                linnas.linn();
-                //Apteek
-                apteek.apt();
-
-
-
             //Pood
             TextFile ascii = new TextFile(@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
             Console.WriteLine(ascii.getText());
@@ -52,18 +41,9 @@ namespace m2ng
 
             Console.ReadLine();
 
-        }
-
-=======
->>>>>>> ecd92a316d6c19ea8c0b0caa25bd92bb5e7d4197
-
             //KOOBAS
             Koobas.Kooba();
-
         }
-
-
-
     }
 }
 
