@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class Koobas
+    class Koobas:karakter
     {
         public static string path;
-
+        public static string StaPath;
         //9 toitu. 4 vett, 2 sokolaadi, 2 pakki kypsist, 1 coca cola
         public static void Vesi()
         {
@@ -28,7 +28,7 @@ namespace m2ng
             }
             else if (Vesi == "jäta maha")
             {
-                Console.WriteLine("Astud šokolaaditahvlile peale ja kõnnid minema.");
+                Console.WriteLine("Lööd veepudelit jalaga teisele poole koopa seina ja see jääb sinna.");
             }
             else goto Ves;
         }

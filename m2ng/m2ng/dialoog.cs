@@ -12,10 +12,13 @@ namespace m2ng
         {
             Console.WriteLine("*Mina*: Eee..Jah, kes see on?");
             Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle psühiaatrikliinikust, Dell'i linnast, teie kaksikuga seoses.");
+            Console.ReadKey();
             Console.WriteLine("*Helistaja*: Nimelt on teie kaksikul, Alex Lee Epp'il avastatud eluohtlik haigus, mille ostmiseks meil õigust ja rahalist toetust ei ole.");
-            Console.WriteLine("*Helistaja*: Kuna tal ei ole luba välja ning endal sissetulekut ei ole, siis ei saa ta rohtu soetada, seega me palume teil talle need rohud välja osta.");
-            Console.WriteLine("*Mina*: Rohud.. Psühiaatrikliinik.. Mida? Millal ta sinna sattus? Ahah, *kirjutan* Dell'is.., Ruthle kliinik jah? *lõpetan kirjutamise* Selge, lendan täna sinna.");
-            Console.WriteLine("*Helistaja*: Aitäh teile.");
+            Console.WriteLine("*Helistaja*: Kuna tal endal sissetulekut ei ole, siis ei saa ta rohtu soetada, seega me palume teil talle need rohud välja osta.");
+            Console.WriteLine("*Mina*: Rohud.. Psühiaatrikliinik.. Mida? Millal ta sinna sattus? Selge, lendan täna sinna.");
+            Console.WriteLine("*kõne lõpp*");
+            Console.WriteLine("------------------");
+            Console.ReadLine();
         }
 
         public static void Dialo()
@@ -25,11 +28,10 @@ namespace m2ng
             kasutaja.nimi = Console.ReadLine();
             Console.WriteLine("Nüüd sisestage palun vanus.");
             kasutaja.vanus = int.Parse(Console.ReadLine());
-            Console.WriteLine("Mis soost te olete?");
+            Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!");
             kasutaja.sugu = Console.ReadLine();
 
             Console.WriteLine("*Ärkad telefoni helina peale. Vaatad kella, kell on 7:00, otusustad kõnet ignoreerida.*");
-            Console.WriteLine("*Tõused üles, jõuad kööki, paned raadio mängima ning teed võileiba.*");
             Console.WriteLine("*Raadio*: Tere hommikust, kell on 07:03. Tõuse ja sära!");
             telk6n1:
             Console.WriteLine("*Telefon heliseb uuesti.* 'vasta' või 'ignoreeri'");
