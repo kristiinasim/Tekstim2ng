@@ -24,6 +24,8 @@ namespace m2ng
             linna.linnas();
             //Linnas. Alates teisest karakterist.
             linnas.linn();
+            //Apteek
+            apteek.apt();
             
 
         }
