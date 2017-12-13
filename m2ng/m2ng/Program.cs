@@ -17,6 +17,7 @@ namespace m2ng
 
             path = @"../../../Invetory.txt";
             File.Delete(path);
+
             ////ASCII
             //Console.ForegroundColor = ConsoleColor.Yellow;
             //string pilt = System.IO.File.ReadAllText(@"../../../../pilt.txt");
@@ -28,9 +29,12 @@ namespace m2ng
             //Console.ReadKey();
             //Console.Clear();
 
+
+
             //Ärkamisest telefonikõnele vastamiseni
             dialoog.Dialo();
             //Telefonikõnest külani
+<<<<<<< HEAD
             lennujaam.JooKohvi();
             lennujaam.Lennujaam();
 
@@ -54,6 +58,38 @@ namespace m2ng
             //Console.WriteLine(aptjek.getText());
 
             //Console.ReadLine();
+=======
+
+            lennujaam.Lennujaam();
+
+            // !LÄHEB APTEEKI!
+            // !OTSIB TÖÖD + RAHA
+            // !HULLUMAJA OSA!
+            // !KOOPA OSA!
+            // !Tagasi külas!
+
+             
+
+            //Lennujaamas sees ning linnas:
+            linna.linnas();
+            //Linnas. Alates teisest karakterist.
+            linnas.linn();
+            //Apteek
+            apteek.apt();
+
+            //Pood
+            //Console.WriteLine("PATH : {0}", Directory.GetCurrentDirectory());
+            
+            TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
+            Console.WriteLine(ascii.getText());
+            //Apteek ja rohud
+            
+            TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
+            Console.WriteLine(aptjek.getText());
+
+            Console.ReadLine();
+
+>>>>>>> master
             //KOOBAS
             Koobas.Kooba();
         }
