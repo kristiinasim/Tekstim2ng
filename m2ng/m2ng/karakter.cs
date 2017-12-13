@@ -12,6 +12,11 @@ namespace m2ng
         public string nimi { get; set; }
         public int vanus { get; set; }
         public string sugu { get; set; }
+
+        
+
+        public static string path1 = @"../../../Stamina.txt";
+
     }
 }
 
