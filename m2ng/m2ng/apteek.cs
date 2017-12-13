@@ -19,7 +19,7 @@ namespace m2ng
             Console.WriteLine("Issake, see on kadunud! Viimati kasutasin seda lennujaamas... Pidin selle vist seal maha pillama. Andestage mulle.");
             Console.WriteLine("'küsin nõu' või 'lähen ära'");
             var valik6 = Console.ReadLine();
-            Console.WriteLine("_______________________");
+            Console.WriteLine("----------------------");
 
             if (valik6 == "küsin nõu")
             {
@@ -28,7 +28,7 @@ namespace m2ng
                 Console.WriteLine("Aitäh! Kust ma ta leida võiks?");
                 Console.WriteLine("*Apteeker:* Te peate minema siit paremale ja siis otse edasi, kuni näete suurt lilledega kaunistatud maja.");
                 Console.WriteLine("Aitäh! Näeme veel!");
-                Console.WriteLine("_____________________");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("*Mõnd aega kõndides jõuangi lilledega kaunistatud poeni.*");
                 Console.ReadLine();
                 

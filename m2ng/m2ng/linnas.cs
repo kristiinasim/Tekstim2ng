@@ -19,7 +19,7 @@ namespace m2ng
                 Console.WriteLine("Tere! Kas te oskate mind Lare'i apteeki juhatada?");
                 Console.WriteLine("*Mees:* Muidugi! Te peate lihtsalt kõndima siit paremale ja siis 4 kilomeetrit edasi. Siis näete suurt maja - see ongi apteek!");
                 Console.WriteLine("Suur tänu!");
-                Console.WriteLine("_________________________________");
+                Console.WriteLine("---------------------");
 
 
 
@@ -55,7 +55,7 @@ namespace m2ng
                 Console.ReadLine();
             }
             Console.WriteLine("*Peale pikka jalutuskäiku jõunagi lõpuks apteeki. Ma ei suuda uskuda, et seda varem üles ei leidnud, kuid mis siis ikka! Nüüd jääb üle vaid veel rohi osta.*");
-            Console.WriteLine("__________________________________");
+            Console.WriteLine("-------------------------");
         }
     }
 }
