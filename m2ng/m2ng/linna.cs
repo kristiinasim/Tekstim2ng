@@ -10,7 +10,7 @@ namespace m2ng
     {
         public static void linnas()
         {
-            Console.WriteLine("*Vaatan ringi:* Kas kõigil võiks olla keegigi, kes mind apteeki juhatada oskaks?");
+            Console.WriteLine("*Vaatan ringi:* Kas kuskil võiks olla keegigi, kes mind apteeki juhatada oskaks?");
             Console.WriteLine("Ohoh! Seal ongi üks koristaja! Tema tunneb kindlasti seda linna!");
             Console.WriteLine("Tere! Kas te oskate mind aidata?");
             Console.WriteLine("*Koristaja*: Tere, milles on probleem?");
