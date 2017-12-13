@@ -12,12 +12,21 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
-            path = @"../../../Invetory.txt";
-            File.Delete(path);
+            //path = @"../../../Invetory.txt";
+            //File.Delete(path);
             //Ärkamisest telefonikõnele vastamiseni
-            dialoog.Dialo();
+            //dialoog.Dialo();
             //Telefonikõnest külani
-            lennujaam.Lennujaam();
+            //lennujaam.Lennujaam();
+
+            //Pood
+            TextFile ascii = new TextFile (@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
+            Console.WriteLine(ascii.getText());
+            //Apteek
+            TextFile aptjek = new TextFile(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\aptjek.txt");
+            Console.WriteLine(aptjek.getText());
+            Console.ReadLine();
+
         }
     }
 }

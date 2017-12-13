@@ -47,7 +47,6 @@
     <Compile Include="karakter.cs" />
     <Compile Include="koobas.cs" />
     <Compile Include="lennujaam.cs" />
-    <Compile Include="pood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="raha.cs" />
@@ -57,7 +56,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="info\ascii_maja.txt" />
+    <Content Include="info\aptjek.txt" />
+    <Content Include="info\ascii.txt" />
     <Content Include="info\raha.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
