@@ -10,7 +10,7 @@ namespace m2ng
     {
         public static void linnas()
         {
-            Console.WriteLine("*Vaatan ringi:* Kas kuskil võiks olla keegigi, kes mind apteeki juhatada oskaks?");
+            Console.WriteLine("*Vaatan ringi:* Kas kõigil võiks olla keegigi, kes mind apteeki juhatada oskaks?");
             Console.WriteLine("Ohoh! Seal ongi üks koristaja! Tema tunneb kindlasti seda linna!");
             Console.WriteLine("---------------");
             Console.ReadLine();
@@ -19,17 +19,17 @@ namespace m2ng
             Console.WriteLine("Olen siin linnas esimest korda ja sooviksin minna lähimasse apteeki. Kas te oskate mind juhatada?");
             Console.WriteLine("*Koristaja*: Muidugi! Kõige lähemal asub arvatavasti Lare'i apteek. Kas ma seletan teile või annan teile linnakaardi? Kaardi eest peaksite aga maksma 50 senti, sest see on kahjuks minu viimane ja mul pole hetkel võimalik uut ostma minna.");
             Console.WriteLine("*Hmm... Haarab rahakoti järgi...*");
-            Console.WriteLine("*Linnakaardi ostmiseks vajutage l ja seletuse jaoks s*");
+            Console.WriteLine("'osta kaart' või 'küsi seletust'");
             var valik = Console.ReadLine();
 
-            if (valik == "l")
+            if (valik == "osta kaart")
             {
                 Console.WriteLine("Kaart oleks vist parem variant. *Naeran*: Mulle ei jää asjad hästi meelde.");
                 Console.WriteLine("*Koristaja:* Arusaadav, näe, ole aga lahke!");
                 Console.WriteLine("Tänan. *Maksan raha* Head päeva jätku!");
                 Console.WriteLine("*Kõndides vaatan kaarti ja mõtlen:* Siin on ju nii segased joonised ja tekst kõik võõrkeeles! Sellest ma küll midagi aru ei saa! Aga pole hullu, küsin siis linnaelanikelt.");
             }
-            if (valik == "s")
+            if (valik == "küsi seletust")
             {
                 Console.WriteLine("Teate, ma kaarte hästi ei mõista. Sooviksin vist seletust.");
                 Console.WriteLine("*Koristaja:* Arusaadav! Te peate lihtsalt kõndima lennujaamast välja suure rohelise hooneni ja keerama sealt vasakule. Siis näete suurt puud, minge paremale, peale seda uuesti paremale ning teeristile jõudes vasakule. Siis näete suurt kaubahoonet ja sealt otse edasi minnes jõuategi apteeki. Mõistate?");
@@ -37,7 +37,7 @@ namespace m2ng
                 Console.WriteLine("*Endamisi mõeldes*: Sellest ma küll midagi aru ei saanud, kuid parem ei hakka naist rohkem tüütama. Uurin parem linlastelt!");
             }
             Console.WriteLine("*Lahkun aeglaselt.* Tegelikult ma ei usu, et see nii keeruline saab olla. Kindlasti olen juba poole tunni pärast haiglas!");
-
+            Console.WriteLine("*Peale veidikest jalutamist näen jõuan linnakesse, kuhu ma minema pidin.*");
             //Linna jõudes
             Console.WriteLine("Hmm, milline ilus linn. Nüüd tuleb vaid otsida inimesi, kes mind apteeki juhatada oskaks.")
 ;           Console.WriteLine("*Näha on üks lonkav vanainimene.* Kas 'kõnnin mööda' või 'küsin abi'?");
@@ -97,15 +97,7 @@ namespace m2ng
                     Console.WriteLine("*Kõnnin vanaproua juhatatud teed pidi edasi*");
                     Console.ReadLine();
                 }
-             
-
-                
-
             }
-            
-
-
-
         }
-}
+    }
 }

@@ -7,7 +7,7 @@ using System.IO;
 
 namespace m2ng
 {
-    class TextFile
+    public class TextFile
     {
         private string TextFileName = "";
         private List<string> Info = new List<string>();
@@ -70,7 +70,7 @@ namespace m2ng
                 if (rowValues[column] == value) return n;
                 n++;
             }
-            return -1;
+            return 0;
         }
 
         public string getValue(int idx, int column)
@@ -83,6 +83,8 @@ namespace m2ng
             }
 
             return "";
+
+            
         }
     }
 }

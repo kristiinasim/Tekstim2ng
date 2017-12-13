@@ -14,6 +14,7 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
+
             path = @"../../../Invetory.txt";
             File.Delete(path);
             ////ASCII
@@ -31,15 +32,18 @@ namespace m2ng
             //Apteek
             apteek.apt();
 
+            //Pood
+            TextFile ascii = new TextFile(@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
+            Console.WriteLine(ascii.getText());
+            //Apteek ja rohud
+            TextFile aptjek = new TextFile(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\aptjek.txt");
+            Console.WriteLine(aptjek.getText());
 
+            Console.ReadLine();
 
             //KOOBAS
             Koobas.Kooba();
-
         }
-
-
-
     }
 }
 

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class raha
+    public class raha
     {
-    
+     
     }
 }
