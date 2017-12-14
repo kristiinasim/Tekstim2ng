@@ -36,7 +36,7 @@ namespace m2ng
            //// Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
            // Console.ResetColor();
             karakter kasutaja = new karakter();
-           kasutaja.nimi = Console.ReadLine();
+           //kasutaja.nimi = Console.ReadLine();
            // Console.ForegroundColor = ConsoleColor.Green;
            // //Console.WriteLine("Nüüd sisestage palun vanus.");
            // Console.ResetColor();
@@ -44,7 +44,7 @@ namespace m2ng
            // Console.ForegroundColor = ConsoleColor.Green;
            // //Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
            // Console.ResetColor();
-           kasutaja.sugu = Console.ReadLine();
+           //kasutaja.sugu = Console.ReadLine();
 
             Console.Clear();
 
