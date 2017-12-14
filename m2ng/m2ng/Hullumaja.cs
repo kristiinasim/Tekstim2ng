@@ -28,7 +28,7 @@ namespace m2ng
                 Console.WriteLine("Ootan millal ta ise hakkab rääkima minuga.");
             }
 
-            Console.WriteLine(" *Kaksik lööb su toimetuks, vahetab sinu riided enda omade vastu ja põgeneb hullumajast. Toimestud juba 5 minuti pärast.");
+            Console.WriteLine(" *Kaksik lööb su toimetuks, vahetab sinu riided enda omade vastu ja põgeneb hullumajast. Toibud juba 5 minuti pärast.");
             Console.WriteLine("  Medõde siseneb ning aitab sind püsti. Viib su oma kabinetti. Ütled, et lähed WC-sse ja kanalisatsiooni kaudu saad välja ning sul tuleb elueest joosta.* ");
         }
     }
