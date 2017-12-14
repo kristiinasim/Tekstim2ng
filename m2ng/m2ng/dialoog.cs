@@ -31,20 +31,21 @@ namespace m2ng
         public static void Dialo()
         {
 
-            //Console.ForegroundColor = ConsoleColor.Green;
-            ////Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
-            //Console.ResetColor();
 
-            //Console.ForegroundColor = ConsoleColor.Green;
-            ////Console.WriteLine("Nüüd sisestage palun vanus.");
-            //Console.ResetColor();
-            ////kasutaja.vanus = int.Parse(Console.ReadLine());
-            //Console.ForegroundColor = ConsoleColor.Green;
-            ////Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
-            //Console.ResetColor();
-            //kasutaja.sugu = Console.ReadLine();
+           // Console.ForegroundColor = ConsoleColor.Green;
+           //// Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
+           // Console.ResetColor();
             karakter kasutaja = new karakter();
-            kasutaja.nimi = Console.ReadLine();
+           kasutaja.nimi = Console.ReadLine();
+           // Console.ForegroundColor = ConsoleColor.Green;
+           // //Console.WriteLine("Nüüd sisestage palun vanus.");
+           // Console.ResetColor();
+           // kasutaja.vanus = int.Parse(Console.ReadLine());
+           // Console.ForegroundColor = ConsoleColor.Green;
+           // //Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
+           // Console.ResetColor();
+           kasutaja.sugu = Console.ReadLine();
+
             Console.Clear();
 
             var kysimus = "";
@@ -53,9 +54,11 @@ namespace m2ng
 
             do
             {
-                Console.WriteLine("Palun valige oma karakterile nimi (min.  täht).");
+
+                Console.WriteLine("Palun valige oma karakterile nimi (min. 3 tähte).");
                 kysimus = Console.ReadLine();
-            } while (kysimus.Length < 1);
+            } while (kysimus.Length < 3);
+
             kasutaja.nimi = kysimus;
 
             var vanus = 0;
