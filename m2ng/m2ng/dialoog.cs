@@ -31,19 +31,19 @@ namespace m2ng
         public static void Dialo()
         {
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
-            Console.ResetColor();
+           // Console.ForegroundColor = ConsoleColor.Green;
+           //// Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
+           // Console.ResetColor();
             karakter kasutaja = new karakter();
-            kasutaja.nimi = Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Nüüd sisestage palun vanus.");
-            Console.ResetColor();
-            kasutaja.vanus = int.Parse(Console.ReadLine());
-            Console.ForegroundColor = ConsoleColor.Green;
-            //Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
-            Console.ResetColor();
-            kasutaja.sugu = Console.ReadLine();
+           kasutaja.nimi = Console.ReadLine();
+           // Console.ForegroundColor = ConsoleColor.Green;
+           // //Console.WriteLine("Nüüd sisestage palun vanus.");
+           // Console.ResetColor();
+           // kasutaja.vanus = int.Parse(Console.ReadLine());
+           // Console.ForegroundColor = ConsoleColor.Green;
+           // //Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
+           // Console.ResetColor();
+           kasutaja.sugu = Console.ReadLine();
             Console.Clear();
 
             var kysimus = "";
@@ -52,9 +52,9 @@ namespace m2ng
 
             do
             {
-                Console.WriteLine("Palun valige oma karakterile nimi (min. 5 tähte).");
+                Console.WriteLine("Palun valige oma karakterile nimi (min. 3 tähte).");
                 kysimus = Console.ReadLine();
-            } while (kysimus.Length < 5);
+            } while (kysimus.Length < 3);
             kasutaja.nimi = kysimus;
 
             var vanus = 0;
@@ -62,7 +62,7 @@ namespace m2ng
             {
                 Console.WriteLine("Tere {0}. Sisestage palun oma vanus.", kasutaja.nimi);
                 kysimus = Console.ReadLine();
-            } while (!int.TryParse(kysimus, out vanus) || vanus < 16);
+            } while (!int.TryParse(kysimus, out vanus));
             kasutaja.vanus = vanus;
             Console.WriteLine("Rõõm tutvuda sinuga {0} aastane {1}.", kasutaja.vanus, kasutaja.nimi);
             do
@@ -74,7 +74,7 @@ namespace m2ng
             kasutaja.sugu = kysimus.ToLower();
 
             Console.Clear();
-            Ekraan.Tervitus();
+            //Ekraan.Tervitus();
 
             Console.WriteLine("*Ärkad telefoni helina peale. Vaatad kella, kell on 7:00, otsustad kõnet ignoreerida.*");
             Console.ReadKey();
