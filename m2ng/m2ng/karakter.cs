@@ -9,7 +9,7 @@ namespace m2ng
 {
     class karakter
     {
-        public string nimi { get; set; }
+        public string Nimi { get; set; }
         public int vanus { get; set; }
         public string sugu { get; set; }
 

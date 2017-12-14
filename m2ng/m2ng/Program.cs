@@ -14,6 +14,8 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
+            TextFile hullumaja = new TextFile(@"..\..\info\hullumaja.dialo.txt");
+            Console.WriteLine(hullumaja.getText());
 
             path = @"../../../Invetory.txt";
             File.Delete(path);
@@ -22,7 +24,8 @@ namespace m2ng
             Console.WriteLine(pilt);
 
             //Ärkamisest telefonikõnele vastamiseni
-            dialoog.Dialo();
+            karakter kasutaja = new karakter();
+            dialoog.Dialo(kasutaja);
             //Telefonikõnest külani
             lennujaam.Lennujaam();
 
@@ -38,6 +41,7 @@ namespace m2ng
             //Apteek
             apteek.apt();
 
+            Hullumaja.hullumaja(kasutaja);
             //Pood
             TextFile ascii = new TextFile(@"C: \Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\info\ascii.txt");
             Console.WriteLine(ascii.getText());

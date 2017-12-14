@@ -25,7 +25,7 @@ namespace m2ng
         {
             Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
             karakter kasutaja = new karakter();
-            kasutaja.nimi = Console.ReadLine();
+            kasutaja.Nimi = Console.ReadLine();
             Console.WriteLine("Nüüd sisestage palun vanus.");
             kasutaja.vanus = int.Parse(Console.ReadLine());
             Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!");
@@ -39,7 +39,7 @@ namespace m2ng
 
             if (telk6n1 == "vasta")
             {
-                Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.Nimi + "?");
                 dialoog.Dia();
             }
 
@@ -51,14 +51,14 @@ namespace m2ng
                 string telk6n2 = Console.ReadLine();
                 if (telk6n2 == "vasta")
                 {
-                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.Nimi + "?");
                     dialoog.Dia();
                 }
 
                 else if (telk6n2 == "viskan telefoni aknast välja")
                 {
                     Console.WriteLine("*Hakkan telefoni aknast välja viskama, kuid viimasel hetkel mõtlen ümber ning vastan kõnele.*");
-                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.Nimi + "?");
                     dialoog.Dia();
                 }
 
