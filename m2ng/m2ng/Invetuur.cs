@@ -23,6 +23,17 @@ namespace m2ng
             }
         }
 
+
+        public static void Invcheck()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Sinu seljakotis on: ");
+            Invetuur.Inv();
+            Console.WriteLine("----------------------------");
+            Console.ResetColor();
+        }
+
         public static void InvCommands()
         {
             path = @"../../../Invetory.txt";

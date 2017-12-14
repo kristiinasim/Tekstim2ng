@@ -7,85 +7,192 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class pood
+    class pood:karakter
     {
         public static string path;
         public static void poes()
         {
             path = @"../../../Invetory.txt";
             Console.WriteLine("Tere, poeomanik! Kuulsin, et teil on tööd pakkuda!");
-            Console.WriteLine("*Poeomanik:* Oi jah, oi jah, mul oleks vaja rottidest lahti saada. Kas saaksid mind aidata?");
+            Console.ReadKey();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("*Poeomanik*: Oi jah, oi jah, mul oleks vaja rottidest lahti saada. Kas saaksid mind aidata?");
+            Console.ResetColor();
+            Console.ReadKey();
             Console.WriteLine("Aga muidugi, kus nad on?");
+            Console.ReadKey();
             Console.WriteLine("*Poeomanik juhatab mu keldrisse*");
-            Console.WriteLine("----------------");
-
+            Console.ReadKey();
+            valik7:
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("*Poe kelder on rotte täis. Kuidas nad tappa? Kas:");
             Console.WriteLine("'1': Löön labidaga pähe");
             Console.WriteLine("'2': Kasutan mürki");
             Console.WriteLine("'3': Uputan keldri üle");
-
+            Console.ResetColor();
             var valik7 = Console.ReadLine();
-
+            Console.Clear();
             if (valik7 == "1")
             {
-                Console.WriteLine("Tapsid rotid, kuid said neilt hammustada.");
-                //MIINUS X STAMINA!
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Tapsid rotid, kuid said neilt hammustada..");
+                Console.ReadKey();
+                Console.WriteLine("Rottide poolt tekitatud hammustus võttis sinult 5 HP maha.");
+                Console.ReadKey();
+                karakter.HP -= 5;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Järele jäänud HP on: " + karakter.HP);
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                Console.ResetColor();
+                karakter.raha += 45;
             }
-            if (valik7 == "2")
+            else if (valik7 == "2")
             {
                 Console.WriteLine("Tapsid rotid edukalt! Palju õnne!");
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                Console.ResetColor();
+                karakter.raha += 45;
             }
-            if (valik7 == "3")
+            else if (valik7 == "3")
             {
-                Console.WriteLine("Tapsid küll rotid, kuid kahjustasid veega poeomaniku varusid keldris. Pead talle nüüd 5 eurot maksma.");
-                //-5 EUROT!!!!!!!!!!
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Tapsid küll rotid, kuid kahjustasid veega poeomaniku varusid keldris.");
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                Console.ReadKey();
+                Console.WriteLine("*Poeomanik*: Kuid kuna sa mu varusid kahjustasid siis võtan ma su tasust 10 eurot maha..");
+                Console.ResetColor();
+                karakter.raha += 35;
             }
-            Console.WriteLine("-------");
-            Console.WriteLine("*Poeomanik:* Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 35 eurot tasuks.");
-            //+35 EUROT!!!
-            Console.WriteLine("*Poeomanik:* Kas soovid midagi osta? Meil on näiteks shokolaadi, vett, plaastreid ja muudki.");
-            Console.WriteLine("*Kas soovid osta midagi neist:*");
-            Console.WriteLine("'1': sokolaad - 3 eurot, + stamina");
-            Console.WriteLine("'2': pudel vett - 2 eurot, + stamina");
-            Console.WriteLine("'3': paki plaastreid - 4 eurot, +stamina");
-            var valik8 = Console.ReadLine();
-
-            if (valik8 == "1")
+            else goto valik7;
+            Console.ReadKey();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Sul on raha: " + karakter.raha);
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.ReadKey();
+            Console.WriteLine("*Poeomanik*: Kas soovid midagi osta? Meil on näiteks shokolaadi, vett, plaastreid ja muudki.");
+            Console.ReadKey();
+            string ascii = System.IO.File.ReadAllText(@"..\..\info\ascii.txt");
+            Console.WriteLine(ascii);
+            Console.ReadKey();
+            Console.WriteLine("*Poeomanik*: Olen kuulnud, et toit taastab staminat..");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ReadKey();
+            Console.WriteLine("(Sul on vaja säilitada 20 eurot rohtude jaoks!)");
+            Console.ResetColor();
+            Console.ReadKey();
+            osta:
+            Console.WriteLine("'osta' või 'ei aitäh'");
+            string osta = Console.ReadLine();
+            Console.Clear();
+            if (osta == "osta")
             {
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                string tekst = "\nsokolaad";
-                File.AppendAllText(path, tekst);
-                Invetuur.Inv();
-                //LÕPETADA
+                ost:
+                Console.WriteLine("*osta midagi neist:*");
+                Console.WriteLine("'1': sokolaad - 4 eurot");
+                Console.WriteLine("'2': pudel vett - 3 eurot");
+                Console.WriteLine("'3': pakk küpsiseid - 6 eurot");
+                Console.WriteLine("'4': paki plaastreid - 5 eurot");
+                var valik8 = Console.ReadLine();
+                Console.Clear();
+                if (valik8 == "1")
+                {
+                    if (karakter.raha >= 4)
+                    {
+                        karakter.raha -= 4;
+                        string tekst = "\nsokolaad";
+                        File.AppendAllText(path, tekst);
+                        Invetuur.Invcheck();
+                        karakter.Rahacheck();
+                    }
+                    else if (karakter.raha < 4)
+                        karakter.Poleraha();
+                }
+                else if (valik8 == "2")
+                {
+                    if (karakter.raha >= 3)
+                    {
+                        karakter.raha -= 3;
+                        string tekst = "\nveepudel";
+                        File.AppendAllText(path, tekst);
+                        Invetuur.Invcheck();
+                        karakter.Rahacheck();
+                    }
+                    else if (karakter.raha < 3)
+                        karakter.Poleraha();
+                }
+                else if (valik8 == "3")
+                {
+                    if (karakter.raha >= 6)
+                    {
+                        karakter.raha -= 6;
+                        string tekst = "\nkypsisepakk";
+                        File.AppendAllText(path, tekst);
+                        Invetuur.Invcheck();
+                        karakter.Rahacheck();
+                    }
+                    else if (karakter.raha < 6)
+                        karakter.Poleraha();
+                }
+                else if (valik8 == "4")
+                {
+                    if (karakter.raha >= 5)
+                    {
+                        karakter.raha -= 5;
+                        string tekst = "\npakk plaastreid";
+                        File.AppendAllText(path, tekst);
+                        Invetuur.Invcheck();
+                        karakter.Rahacheck();
+                    }
+                    else if (karakter.raha < 5)
+                        karakter.Poleraha();
+                }
+                else goto ost;
+                veel:
+                Console.WriteLine("Soovite veel osta? 'jah' või 'ei'");
+                string vastu = Console.ReadLine();
+                Console.Clear();
+                if (vastu == "jah")
+                {
+                    if (karakter.raha >= 3)
+                        goto ost;
+                    else if (karakter.raha < 3)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Sul ei ole piisavalt raha, et midagi osta!");
+                        Console.ResetColor();
+                    }
+                }
+                else if (vastu == "ei")
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("*Poeomanik*: Aitäh teile, olite suureks abiks!");
+                    Console.ResetColor();
+                    Console.ReadKey();
+                    Console.WriteLine("*Nüüd jääb üle vaid apteeki tagasi minna...*");
+                    Console.ReadKey();
+                }
+                else goto veel;
             }
-            if (valik8 == "2")
+            else if (osta == "ei aitäh")
             {
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                string tekst = "\nveepudel";
-                File.AppendAllText(path, tekst);
-                Invetuur.Inv();
-
+                Console.WriteLine("Ei aitäh, ma parem liigun edasi.");
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("*Poeomanik*: Aitäh teile, olite suureks abiks!");
+                Console.ResetColor();
+                Console.ReadKey();
+                Console.WriteLine("*Sead sammud tagasi apteegi poole..*");
+                Console.ReadKey();
             }
-             if (valik8 == "3")
-            {
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                string tekst = "\npakk plaastreid";
-                File.AppendAllText(path, tekst);
-                Invetuur.Inv();
-            }
-            Console.WriteLine("Aitäh teile, olite suureks abiks!");
-            Console.WriteLine("Nüüd jääb üle vaid apteeki tagasi minna...");
-            Console.WriteLine("--------------");
-
-
-           
-
-
-
-
-
-
-
+            else goto osta;
         }
     }
 }

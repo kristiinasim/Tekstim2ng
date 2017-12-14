@@ -13,6 +13,7 @@ namespace m2ng
             Console.WriteLine("Näed koopas liikumas rotti.");
             Console.ReadKey();
             Console.WriteLine("Üritad rotti jälitada, kuid ta paneb plehku.");
+            Console.ReadKey();
         }
 
         public static void RottValja()
@@ -20,6 +21,7 @@ namespace m2ng
             Console.WriteLine("Näed koopas liikumas rotti. Ta laseb sul endale järgi jõuda.");
             Console.ReadKey();
             Console.WriteLine("Rotti jälitades leiad sa tee koopast välja!");
+            Console.ReadKey();
         }
 
         public static void PolitseiLucky()
@@ -49,6 +51,7 @@ namespace m2ng
                 Console.ReadKey();
                 Console.WriteLine("Peidad ennast veel natukene aega igaks juhuks ning siis liigud edasi.");
                 Console.ResetColor();
+                Console.ReadKey();
             }
             else if (Politsei == "võitle")
             {
@@ -61,6 +64,7 @@ namespace m2ng
                 Console.ReadKey();
                 Console.WriteLine("Peidad ennast veel natukene aega igaks juhuks ning siis liigud edasi.");
                 Console.ResetColor();
+                Console.ReadKey();
             }
             else goto Politsei;
             Console.ReadKey();
@@ -69,6 +73,7 @@ namespace m2ng
         public static void MangLabi()
         {
             Console.WriteLine("Kaotasid mängu!");
+            karakter.Kaotasid();
             Environment.Exit(0);
         }
     }

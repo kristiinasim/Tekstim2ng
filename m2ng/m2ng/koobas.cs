@@ -21,12 +21,7 @@ namespace m2ng
             {
                 string tekst = "\nveepudel";
                 File.AppendAllText(path, tekst);
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("----------------------------");
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                Invetuur.Inv();
-                Console.WriteLine("----------------------------");
-                Console.ResetColor();
+                Invetuur.Invcheck();
             }
             else if (Vesi == "jäta maha")
             {
@@ -46,12 +41,7 @@ namespace m2ng
             {
                 string tekst = "\nsokolaad";
                 File.AppendAllText(path, tekst);
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("----------------------------");
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                Invetuur.Inv();
-                Console.WriteLine("----------------------------");
-                Console.ResetColor();
+                Invetuur.Invcheck();
             }
             else if (SokLad == "jäta maha")
             {
@@ -71,12 +61,7 @@ namespace m2ng
             {
                 string tekst = "\nkypsisepakk";
                 File.AppendAllText(path, tekst);
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("----------------------------");
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                Invetuur.Inv();
-                Console.WriteLine("----------------------------");
-                Console.ResetColor();
+                Invetuur.Invcheck();
             }
             else if (KypPak == "jäta maha")
             {
@@ -96,12 +81,7 @@ namespace m2ng
             {
                 string tekst = "\nCoca-Cola";
                 File.AppendAllText(path, tekst);
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("----------------------------");
-                Console.WriteLine("Sinu seljakotis on nüüd: ");
-                Invetuur.Inv();
-                Console.WriteLine("----------------------------");
-                Console.ResetColor();
+                Invetuur.Invcheck();
             }
             else if (Coca == "jäta maha")
             {
@@ -114,11 +94,9 @@ namespace m2ng
         public static void Kooba()
         {
             path = @"../../../Invetory.txt";
-            File.Delete(path);
-            string tekst = "---Tühi koht---";
-            File.AppendAllText(path, tekst);
             suund:
-            Console.WriteLine("Läbi luugi oled sattunud koopasse.");
+            Console.WriteLine("Kanalisatsiooni läbi oled sattunud koopasse.");
+            Console.ReadKey();
             Console.WriteLine("Võimalik on minna kas 'paremale' või 'vasakule'.");
             string suund = Console.ReadLine();
             Console.Clear();
@@ -304,17 +282,14 @@ namespace m2ng
 
         public static void S88()
         {
+            path = @"../../../Invetory.txt";
             Console.Clear();
             Console.WriteLine("Sul ei ole piisavalt staminat!");
             Console.WriteLine("Stamina taastamiseks söö/joo midagi, kui sul on seljakotis midagi, mida süüa/juua.");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Sinu seljakotis on: ");
-            Invetuur.Inv();
-            Console.WriteLine("----------------------------");
-            Console.ResetColor();
             Console.ReadKey();
             onmidagi:
+            s88k:
+            Invetuur.Invcheck();
             Console.WriteLine("Soovid/on sul midagi süüa/juua oma seljakotist? 'jah' või 'ei'");
             string onmidagi = Console.ReadLine();
             if (onmidagi == "jah")
@@ -322,32 +297,46 @@ namespace m2ng
                 Console.WriteLine("Mida sa soovid süüa/juua?");
                 Console.WriteLine("(Kirjuta seljakotis olev toit/jook selgelt välja ja samamoodi, nagu seljakotis kirjas.)");
                 string s88k = Console.ReadLine();
+                Console.Clear();
                 string[] kontro = System.IO.File.ReadAllLines(path);
                 foreach (string asi in kontro)
                 {
                     if (asi == s88k)
                     {
-                        Console.WriteLine("*otsid kotist, leiad selle toidu/joogi*: Mmm, " + s88k);
-                        Console.WriteLine("Said selle toidu/joogi söömise/joomise eest +30 staminat!");
-                        karakter.stamina += 30;
-                        string text = File.ReadAllText(path);
-                        text = text.Replace(s88k, "---Tühi koht---");
-                        File.WriteAllText(path, text);
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("----------------------------");
-                        Console.WriteLine("Sinu seljakotis on: ");
-                        Invetuur.Inv();
-                        Console.WriteLine("----------------------------");
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                        Console.ResetColor();
-                        Console.ResetColor();
+                        if (s88k == "pakk plaastreid")
+                        {
+                            Console.WriteLine("Plaastrid ei ole söömiseks..");
+                            Console.ReadKey();
+                            goto s88k;
+                        }
+                        else if (s88k == "rohi 'Calvan'")
+                        {
+                            Console.WriteLine("See rohi on su kaksikule!");
+                            Console.ReadKey();
+                            goto s88k;
+                        }
+                        else if (s88k == " ")
+                        {
+                            Console.WriteLine("Õhku ei ole võimalik süüa!");
+                            goto s88k;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Said selle toidu/joogi söömise/joomise eest +30 staminat!");
+                            Console.ReadKey();
+                            karakter.stamina += 30;
+                            string text = File.ReadAllText(path);
+                            text = text.Replace(s88k, " ");
+                            File.WriteAllText(path, text);
+                        }
+
                     }
                     else if (asi != s88k)
                     {
-                        Console.WriteLine("*otsid kotist, leiad eseme*: Pole " + s88k + "..");
                     }
                 }
+                Invetuur.Invcheck();
+                karakter.Staminacheck();
             }
 
             else if (onmidagi == "ei")
@@ -441,9 +430,7 @@ namespace m2ng
             if (vas1 == "pähe")
             {
                 Pahe();
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                Console.ResetColor();
+                karakter.Staminacheck();
                 if (karakter.EnemyHP > 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -455,9 +442,7 @@ namespace m2ng
                     if (vas2 == "pähe")
                     {
                         Pahe();
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                        Console.ResetColor();
+                        karakter.Staminacheck();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                         Console.ResetColor();
@@ -465,9 +450,7 @@ namespace m2ng
                     else if (vas2 == "kõhtu")
                     {
                         Kohtu();
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                        Console.ResetColor();
+                        karakter.Staminacheck();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                         Console.ResetColor();
@@ -478,9 +461,7 @@ namespace m2ng
             else if (vas1 == "kõhtu")
             {
                 Kohtu();
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                Console.ResetColor();
+                karakter.Staminacheck();
                 if (karakter.EnemyHP > 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -496,9 +477,7 @@ namespace m2ng
                     if (vas3 == "pähe")
                     {
                         Pahe();
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                        Console.ResetColor();
+                        karakter.Staminacheck();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                         Console.ResetColor();
@@ -506,9 +485,7 @@ namespace m2ng
                     else if (vas3 == "kõhtu")
                     {
                         Kohtu();
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                        Console.ResetColor();
+                        karakter.Staminacheck();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                         Console.ResetColor();

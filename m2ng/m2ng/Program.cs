@@ -14,20 +14,17 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
-            TextFile hullumaja = new TextFile(@"..\..\info\hullumaja.dialo.txt");
-            Console.WriteLine(hullumaja.getText());
+            ////// !Tagasi külas!
 
-            
+            //////Mäng järjekorras--
+            karakter kasutaja = new karakter();
             path = @"../../../Invetory.txt";
             File.Delete(path);
-            pood.poes();
-
-            //ASCII
+            string tekst = " ";
+            File.AppendAllText(path, tekst);
+            
             Console.ForegroundColor = ConsoleColor.Yellow;
-
             string pilt = System.IO.File.ReadAllText(@"..\..\info\pilt.txt");
-
-           
             Console.WriteLine(pilt);
 
             Console.ForegroundColor = ConsoleColor.Green;
@@ -37,56 +34,18 @@ namespace m2ng
             Console.ResetColor();
             Console.ReadKey();
             Console.Clear();
-            //Ärkamisest telefonikõnele vastamiseni
-            karakter kasutaja = new karakter();
+
             dialoog.Dialo();
-            //Telefonikõnest külani
             lennujaam.JooKohvi();
             lennujaam.Lennujaam();
-
-            //// !LÄHEB APTEEKI!
-            //// !OTSIB TÖÖD + RAHA
-            //// !HULLUMAJA OSA!
-            //// !KOOPA OSA!
-            //// !Tagasi külas!
-            //Lennujaamas sees ning linnas:
             linna.linnas();
-            //Linnas. Alates teisest karakterist.
             linna.linn();
-            //Apteek
-
-            Hullumaja.hullumaja();
-            //Pood
-            TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
-
-            Console.WriteLine(ascii.getText());
-            //Apteek ja rohud
-            TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
-            Console.WriteLine(aptjek.getText());
-            Console.ReadLine();
-            /////Apteek tekst
             apteek.apt();
-            //Poes rotte püüdmas
             pood.poes();
-            //Apteeki tagasi, enne hullumaja
             apteek2.tagasi();
-
-
-            //Console.ReadLine();
-
-
-            // !LÄHEB APTEEKI!
-            // !OTSIB TÖÖD + RAHA
-            // !HULLUMAJA OSA!
-            // !KOOPA OSA!
-            // !Tagasi külas!
-
-            //Pood
-            //Console.WriteLine("PATH : {0}", Directory.GetCurrentDirectory());
-
-
-            //KOOBAS
+            Hullumaja.hullumaja();
             Koobas.Kooba();
+            ////TAGASI KÜLLA JA HULLUMAJJA
         }
     }
     

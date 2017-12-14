@@ -7,29 +7,45 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class Hullumaja:karakter
+    class Hullumaja
     {
         public static void hullumaja()
         {
             Console.WriteLine(" *Mina* : Tere. Ma tõin ravimid. Kas ma saaksin külastada oma kaksikut? ");
-            Console.WriteLine(" *Doktor* : Jah. Medõde viib Teid tema ruumini. Õde! ");
-            Console.WriteLine(" *Medõde* : Jah? ");
-            Console.WriteLine(" *Doktor* : Viige " + "Alex Lee Epp`i juurde palun.");
-            Console.WriteLine(" -------------------");
-            Console.WriteLine("* Liigume ruumi poole. Palud, et sind lastakse sisse.Pika anumise peale laseb medõde sind sisse,/n/ paneb ukse kinni ning ise seisab ukse kõrval väljaspol. * ");
-            Console.WriteLine(" *Kas alustad rääkimist või ootad kuni tema alustab? ´alustan´/´ootan´");
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.ReadKey();
+            Console.WriteLine("*Doktor* : Jah. Medõde viib Teid tema ruumini. Õde! ");
+            Console.ReadKey();
+            Console.WriteLine("*Medõde* : Jah? ");
+            Console.ReadKey();
+            Console.WriteLine("*Doktor* : Viige ta Alex Lee Epp`i juurde palun.");
+            Console.ResetColor();
+            Console.ReadKey();
+            Console.WriteLine("*Liigume ruumi poole. Jõudnud sinna, laseb medõde su sisse.*");
+            Console.ReadKey();
+            Console.WriteLine("*Medõde paneb ukse kinni ning liigub tagasi oma kabinetti.*");
+            Console.ReadKey();
+            vastus:
+            Console.WriteLine("Kas alustad kaksikuga rääkimist või ootad kuni tema alustab? 'alustan' või 'ootan'");
             string vastus = Console.ReadLine();
             if (vastus == "alustan")
             {
-                Console.WriteLine(" *Mina*: Tsau!Kuidas sul siin läheb ? ");
+                Console.WriteLine("*Mina*: Tsau! Kuidas sul siin läheb ? ");
             }
             else if (vastus == "ootan")
             {
-                Console.WriteLine("Ootan millal ta ise hakkab rääkima minuga.");
+                Console.WriteLine("*Ootan millal ta ise hakkab rääkima minuga.*");
             }
-
-            Console.WriteLine(" *Kaksik lööb su toimetuks, vahetab sinu riided enda omade vastu ja põgeneb hullumajast. Toibud juba 5 minuti pärast.");
-            Console.WriteLine("  Medõde siseneb ning aitab sind püsti. Viib su oma kabinetti. Ütled, et lähed WC-sse ja kanalisatsiooni kaudu saad välja ning sul tuleb elueest joosta.* ");
+            else goto vastus;
+            Console.ReadKey();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("*Kaksik lööb su toimetuks, vahetab sinu riided enda omade vastu ja põgeneb ruumist.*");
+            Console.ReadKey();
+            Console.WriteLine("Medõde siseneb ning aitab sind püsti. Viib su oma kabinetti, arvates, et sa oled oma kaksik Alex.");
+            Console.ResetColor();
+            Console.ReadKey();
+            Console.WriteLine("Ütled, et lähed WC-sse. Teel sinna leiad põgenemiseks tee kanalisatsiooni, mis on üllatavalt puhas.");
+            Console.ReadKey();
         }
     }
 }

@@ -149,7 +149,15 @@ namespace m2ng
                     Console.WriteLine("*Vanaproua:* Kuidas palun!? Kas sa saad, kao siit minema ja mine kooli keelt õppima! *Virutab vihmavarjuga*");
                     Console.ResetColor();
                     Console.ReadKey();
-                    //VIHMAVARJUGA PIHTA SAAMINE VÄHENDAB STAMINAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Vihmavari vähendas su HP kolme võrra.");
+                    Console.ResetColor();
+                    karakter.HP -= 3;
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Sinu HP on: " + karakter.HP);
+                    Console.ResetColor();
+                    Console.ReadLine();
                     Console.WriteLine("*Kõnnin lihtsalt edasi. Kuskile pean ju ikka välja jõudma.*");
                     Console.ReadKey();
                     Console.Clear();
@@ -252,10 +260,11 @@ namespace m2ng
             }
             else goto valik5;
             Console.ReadKey();
-            //Lisada apteegi väline pilt
+            Console.Clear();
+            string apteekvaljast = System.IO.File.ReadAllText(@"..\..\info\apteekvaljast.txt");
+            Console.WriteLine(apteekvaljast);
             Console.WriteLine("*Peale pikka jalutuskäiku jõunagi lõpuks apteeki. Ma ei suuda uskuda, et seda varem üles ei leidnud, kuid mis siis ikka! Nüüd jääb üle vaid veel rohi osta.*");
             Console.ReadKey();
-            Console.Clear();
         }
     }
 }
