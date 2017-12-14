@@ -15,7 +15,7 @@ namespace m2ng
             Console.WriteLine("Eee..Jah, kes see on?");
             Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle psühiaatrikliinikust, Dell'i linnast, teie kaksikuga seoses.");
+            Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle psühhiaatrikliinikust, Dell'i linnast, teie kaksikuga seoses.");
             Console.WriteLine("*Helistaja*: Nimelt on teie kaksikul, Alex Lee Epp'il avastatud eluohtlik haigus, mille ostmiseks meil õigust ja rahalist toetust ei ole.");
             Console.WriteLine("*Helistaja*: Kuna tal endal sissetulekut ei ole, siis ei saa ta rohtu soetada, seega me palume teil talle need rohud välja osta.");
             Console.ReadKey();

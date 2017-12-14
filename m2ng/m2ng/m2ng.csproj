@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="apteek.cs" />
+    <Compile Include="apteek2.cs" />
     <Compile Include="dialoog.cs" />
     <Compile Include="Invetuur.cs" />
     <Compile Include="karakter.cs" />

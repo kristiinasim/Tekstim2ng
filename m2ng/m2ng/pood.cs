@@ -14,6 +14,68 @@ namespace m2ng
             Console.WriteLine("*Poeomanik:* Oi jah, oi jah, mul oleks vaja rottidest lahti saada. Kas saaksid mind aidata?");
             Console.WriteLine("Aga muidugi, kus nad on?");
             Console.WriteLine("*Poeomanik juhatab mu keldrisse*");
+            Console.WriteLine("----------------");
+
+            Console.WriteLine("*Poe kelder on rotte täis. Kuidas nad tappa? Kas:");
+            Console.WriteLine("'1': Löön labidaga pähe");
+            Console.WriteLine("'2': Kasutan mürki");
+            Console.WriteLine("'3': Uputan keldri üle");
+
+            var valik7 = Console.ReadLine();
+
+            if (valik7 == "1")
+            {
+                Console.WriteLine("Tapsid rotid, kuid said neilt hammustada.");
+                //MIINUS X STAMINA!
+            }
+            if (valik7 == "2")
+            {
+                Console.WriteLine("Tapsid rotid edukalt! Palju õnne!");
+            }
+            if (valik7 == "3")
+            {
+                Console.WriteLine("Tapsid küll rotid, kuid kahjustasid veega poeomaniku varusid keldris. Pead talle nüüd 5 eurot maksma.");
+                //-5 EUROT!!!!!!!!!!
+            }
+            Console.WriteLine("-------");
+            Console.WriteLine("*Poeomanik:* Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 35 eurot tasuks.");
+            //+35 EUROT!!!
+            Console.WriteLine("*Poeomanik:* Kas soovid midagi osta? Meil on näiteks shokolaadi, vett, plaastreid ja muudki.");
+            Console.WriteLine("*Kas soovid osta midagi neist:*");
+            Console.WriteLine("'1': Shokolaad - 3 eurot, + stamina");
+            Console.WriteLine("'2': Pudel vett - 2 eurot, + stamina");
+            Console.WriteLine("'3': Paki plaastreid - 4 eurot, +stamina");
+            var valik8 = Console.ReadLine();
+
+            if (valik8 == "1")
+            {
+                Console.WriteLine("Sinu seljakotis on nüüd: ");
+                Invetuur.Inv();
+                //LÕPETADA
+            }
+            if (valik8 == "2")
+            {
+                Console.WriteLine("Sinu seljakotis on nüüd: ");
+                Invetuur.Inv();
+
+            }
+             if (valik8 == "3")
+            {
+                Console.WriteLine("Sinu seljakotis on nüüd: ");
+                Invetuur.Inv();
+            }
+            Console.WriteLine("Aitäh teile, olite suureks abiks!");
+            Console.WriteLine("Nüüd jääb üle vaid apteeki tagasi minna...");
+            Console.WriteLine("--------------");
+
+
+           
+
+
+
+
+
+
 
         }
     }
