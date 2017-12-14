@@ -15,7 +15,6 @@ namespace m2ng
         {
             Ves:
             Console.WriteLine("Leiad maast veepudeli! 'korja üles' või 'jäta maha'");
-            Console.WriteLine("Vesi annab juues +20 stamina.");
             Console.ResetColor();
             string Vesi = Console.ReadLine();
             if (Vesi == "korja üles")

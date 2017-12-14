@@ -30,7 +30,7 @@ namespace m2ng
             Console.WriteLine(pilt);
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Et mängus edasi liikuda, pead vajutama suvalist klahvi.");
+            Console.WriteLine("\nEt mängus edasi liikuda, pead vajutama suvalist klahvi.");
             Console.WriteLine("(Välja arvatud siis, kui tuleb kirjutada vastus.)");
             Console.ResetColor();
             Console.ReadKey();
