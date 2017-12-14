@@ -24,13 +24,7 @@ namespace m2ng
 
             string pilt = System.IO.File.ReadAllText(@"../../../pilt.txt");
 
-            path = @"../../../Invetory.txt";
-            File.Delete(path);
-
-            //ASCII
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            string pilt = System.IO.File.ReadAllText(@"../../../../pilt.txt");
-
+           
             Console.WriteLine(pilt);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Et mängus edasi liikuda, pead vajutama suvalist klahvi.");
