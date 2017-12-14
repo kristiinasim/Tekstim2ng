@@ -63,7 +63,7 @@ namespace m2ng
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("*Peale veidikest jalutamist näen jõuan linnakesse, kuhu ma minema pidin.*");
+            Console.WriteLine("*Peale veidikest jalutamist jõuan linnakesse, kuhu ma minema pidin.*");
             //Linna jõudes
             Console.ReadKey();
             Console.WriteLine("Hmm, milline ilus linn. Nüüd tuleb vaid otsida inimesi, kes mind apteeki juhatada oskaks.");

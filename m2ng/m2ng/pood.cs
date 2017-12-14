@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,10 @@ namespace m2ng
 {
     class pood
     {
+        public static string path;
         public static void poes()
         {
+            path = @"../../../Invetory.txt";
             Console.WriteLine("Tere, poeomanik! Kuulsin, et teil on tööd pakkuda!");
             Console.WriteLine("*Poeomanik:* Oi jah, oi jah, mul oleks vaja rottidest lahti saada. Kas saaksid mind aidata?");
             Console.WriteLine("Aga muidugi, kus nad on?");
@@ -42,26 +45,32 @@ namespace m2ng
             //+35 EUROT!!!
             Console.WriteLine("*Poeomanik:* Kas soovid midagi osta? Meil on näiteks shokolaadi, vett, plaastreid ja muudki.");
             Console.WriteLine("*Kas soovid osta midagi neist:*");
-            Console.WriteLine("'1': Shokolaad - 3 eurot, + stamina");
-            Console.WriteLine("'2': Pudel vett - 2 eurot, + stamina");
-            Console.WriteLine("'3': Paki plaastreid - 4 eurot, +stamina");
+            Console.WriteLine("'1': sokolaad - 3 eurot, + stamina");
+            Console.WriteLine("'2': pudel vett - 2 eurot, + stamina");
+            Console.WriteLine("'3': paki plaastreid - 4 eurot, +stamina");
             var valik8 = Console.ReadLine();
 
             if (valik8 == "1")
             {
                 Console.WriteLine("Sinu seljakotis on nüüd: ");
+                string tekst = "\nsokolaad";
+                File.AppendAllText(path, tekst);
                 Invetuur.Inv();
                 //LÕPETADA
             }
             if (valik8 == "2")
             {
                 Console.WriteLine("Sinu seljakotis on nüüd: ");
+                string tekst = "\nveepudel";
+                File.AppendAllText(path, tekst);
                 Invetuur.Inv();
 
             }
              if (valik8 == "3")
             {
                 Console.WriteLine("Sinu seljakotis on nüüd: ");
+                string tekst = "\npakk plaastreid";
+                File.AppendAllText(path, tekst);
                 Invetuur.Inv();
             }
             Console.WriteLine("Aitäh teile, olite suureks abiks!");
