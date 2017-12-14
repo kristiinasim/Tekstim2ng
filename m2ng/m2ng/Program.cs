@@ -15,11 +15,12 @@ namespace m2ng
         static void Main(string[] args)
         {
             
-            //path = @"../../../Invetory.txt";
-            //File.Delete(path);
+            path = @"../../../Invetory.txt";
+            File.Delete(path);
             
             //ASCII
             Console.ForegroundColor = ConsoleColor.Yellow;
+            
             string pilt = System.IO.File.ReadAllText(@"../../../pilt.txt");
             Console.WriteLine(pilt);
             Console.ForegroundColor = ConsoleColor.Green;
@@ -89,5 +90,6 @@ namespace m2ng
 
     }
     }
-}
+
+
 
