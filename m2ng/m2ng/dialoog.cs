@@ -41,7 +41,7 @@ namespace m2ng
             Console.ResetColor();
             kasutaja.vanus = int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!");
+            Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
             Console.ResetColor();
             kasutaja.sugu = Console.ReadLine();
             Console.Clear();
