@@ -31,29 +31,7 @@ namespace m2ng
         public static void Dialo()
         {
             karakter kasutaja = new karakter();
-<<<<<<< HEAD
 
-            //Console.WriteLine("Nüüd sisestage palun vanus.");
-            //kasutaja.vanus = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!");
-            //kasutaja.sugu = Console.ReadLine();
-            //kasutaja.nimi = Console.ReadLine();
-            //Console.Clear();
-
-           //kasutaja.nimi = Console.ReadLine();
-           // Console.ForegroundColor = ConsoleColor.Green;
-           // //Console.WriteLine("Nüüd sisestage palun vanus.");
-           // Console.ResetColor();
-           // kasutaja.vanus = int.Parse(Console.ReadLine());
-           // Console.ForegroundColor = ConsoleColor.Green;
-           // //Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
-           // Console.ResetColor();
-           //kasutaja.sugu = Console.ReadLine();
-
-            Console.Clear();
-
-=======
->>>>>>> Elenn
 
             var kysimus = "";
 
