@@ -32,6 +32,7 @@ namespace m2ng
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nEt mängus edasi liikuda, pead vajutama suvalist klahvi.");
             Console.WriteLine("(Välja arvatud siis, kui tuleb kirjutada vastus.)");
+            Console.WriteLine("Mängu käigus on soovitatav koguda võimalikult palju staminat.");
             Console.ResetColor();
             Console.ReadKey();
             Console.Clear();

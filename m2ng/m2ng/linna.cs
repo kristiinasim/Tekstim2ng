@@ -29,6 +29,7 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Hmm... Haarab rahakoti järgi...*");
             Console.ReadKey();
+            valik:
             Console.WriteLine("'osta kaart' või 'küsi seletust'");
             var valik = Console.ReadLine();
             Console.Clear();
@@ -46,7 +47,7 @@ namespace m2ng
                 Console.ReadKey();
                 Console.WriteLine("*Kõndides vaatan kaarti ja mõtlen:* Siin on ju nii segased joonised ja tekst kõik võõrkeeles! Sellest ma küll midagi aru ei saa! Aga pole hullu, küsin siis linnaelanikelt.");
             }
-            if (valik == "küsi seletust")
+            else if (valik == "küsi seletust")
             {
                 Console.WriteLine("Teate, ma kaarte hästi ei mõista. Sooviksin vist seletust.");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -56,6 +57,7 @@ namespace m2ng
                 Console.ReadKey();
                 Console.WriteLine("*Endamisi mõeldes*: Sellest ma küll midagi aru ei saanud, kuid parem ei hakka naist rohkem tüütama. Uurin parem linlastelt!");
             }
+            else goto valik;
             Console.ReadKey();
             Console.WriteLine("*Lahkun aeglaselt.* Tegelikult ma ei usu, et see nii keeruline saab olla. Kindlasti olen juba poole tunni pärast haiglas!");
             Console.ReadKey();
@@ -66,22 +68,24 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("Hmm, milline ilus linn. Nüüd tuleb vaid otsida inimesi, kes mind apteeki juhatada oskaks.");
             Console.ReadKey();
+            valik2:
 ;           Console.WriteLine("*Näha on üks lonkav vanainimene.* Kas 'kõnnin mööda' või 'küsin abi'?");
             var valik2 = Console.ReadLine();
 
-            if(valik2 == "kõnnin mööda")
+            if (valik2 == "kõnnin mööda")
             {
                 Console.WriteLine("Hmm, ma ei usu, et tema mind aidata oskab. Vaatan edasi!");
                 Console.ReadKey();
                 Console.Clear();
 
             }
-            if (valik2 == "küsin abi")
+            else if (valik2 == "küsin abi")
             {
+                valik3:
                 Console.WriteLine("Kuidas alustaksin vestlust? Kas:");
                 Console.WriteLine("1: Tervist, vanaproua, kas te aitaksite mind palun?");
                 Console.WriteLine("2: Jou, kas aitad mind v?");
-;               Console.WriteLine("3: Tere, kas te oskaksite mind palun edasi juhatada?");
+                Console.WriteLine("3: Tere, kas te oskaksite mind palun edasi juhatada?");
                 var valik3 = Console.ReadLine();
                 Console.Clear();
 
@@ -93,6 +97,7 @@ namespace m2ng
                     Console.WriteLine("*Vanaproua*:Oi, pojuke, mis vanaproua mina olen, mina pole veel abieluski, mina veel alles preili!");
                     Console.ResetColor();
                     Console.ReadKey();
+                    val:
                     Console.WriteLine("Mida vastan?");
                     Console.WriteLine("a: Ah, mis sa ajad, sa ju vana nagu muld!");
                     Console.WriteLine("b: Vabandust, oleksin pidanud kohe aru saama!");
@@ -110,7 +115,7 @@ namespace m2ng
                         Console.ReadLine();
                         Console.Clear();
                     }
-                    if (val == "b")
+                    else if (val == "b")
                     {
                         Console.WriteLine("Vabandust, oleksin pidanud kohe aru saama!");
                         Console.ReadKey();
@@ -134,6 +139,7 @@ namespace m2ng
                         Console.ReadKey();
                         Console.Clear();
                     }
+                    else goto val;
                 }
                 else if (valik3 == "2")
                 {
@@ -172,11 +178,14 @@ namespace m2ng
                     Console.ReadKey();
                     Console.Clear();
                 }
+                else goto valik3;
             }
+            else goto valik2;
         }
 
         public static void linn()
         {
+            valik4:
             Console.WriteLine("*Näen teel noort naist lapsega.* Kas: 'jalutan mööda' või 'küsin juhiseid'");
             var valik4 = Console.ReadLine();
             Console.Clear();
@@ -194,7 +203,7 @@ namespace m2ng
                 Console.ReadKey();
                 Console.WriteLine("Suur tänu!");
             }
-            if (valik4 == "küsin juhiseid")
+            else if (valik4 == "küsin juhiseid")
             {
                 Console.WriteLine("Tere! Kas oskate mind palun Lare'i apteeki juhatada?");
                 Console.ReadKey();
@@ -205,9 +214,11 @@ namespace m2ng
                 Console.WriteLine("Aitäh!");
 
             }
+            else goto valik4;
             Console.ReadKey();
             Console.WriteLine("*Mõne aja pärast:*Hmm, olen kõndinud nii paremale kui ka edasi, kuid maja pole näha. Ehk peaksin korra veel küsida proovima?");
             Console.ReadKey();
+            valik5:
             Console.WriteLine("Seal ongi üks nooruk. Kas 'kõnnin mööda' või 'küsin abi'?");
             string valik5 = Console.ReadLine();
             Console.Clear();
@@ -239,6 +250,7 @@ namespace m2ng
                 Console.ResetColor();
                 Console.WriteLine("Oh, kas tõesti! Olen juba 15 minutit siin ringi käinud. Aitäh!");
             }
+            else goto valik5;
             Console.ReadKey();
             //Lisada apteegi väline pilt
             Console.WriteLine("*Peale pikka jalutuskäiku jõunagi lõpuks apteeki. Ma ei suuda uskuda, et seda varem üles ei leidnud, kuid mis siis ikka! Nüüd jääb üle vaid veel rohi osta.*");

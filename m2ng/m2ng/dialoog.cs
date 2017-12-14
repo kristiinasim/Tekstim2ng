@@ -33,12 +33,11 @@ namespace m2ng
             karakter kasutaja = new karakter();
 
             var kysimus = "";
-
-            Console.WriteLine("Tere tulemast '24 tundi'.");
-
             do
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Palun valige oma karakterile nimi (min. 3 tähte).");
+                Console.ResetColor();
                 kysimus = Console.ReadLine();
             } while (kysimus.Length < 3);
 
@@ -47,14 +46,18 @@ namespace m2ng
             var vanus = 0;
             do
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Tere {0}. Sisestage palun oma vanus.", kasutaja.nimi);
+                Console.ResetColor();
                 kysimus = Console.ReadLine();
             } while (!int.TryParse(kysimus, out vanus));
             kasutaja.vanus = vanus;
             //Console.WriteLine("Rõõm tutvuda sinuga {0} aastane {1}.", kasutaja.vanus, kasutaja.nimi);
             do
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Mis soost te olete? ('naine' või 'mees')");
+                Console.ResetColor();
                 kysimus = Console.ReadLine();
             } while (kysimus.ToLower() != "naine" && kysimus.ToLower() != "mees");
 
