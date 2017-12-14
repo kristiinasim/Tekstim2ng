@@ -15,7 +15,7 @@ namespace m2ng
             Console.WriteLine("Eee..Jah, kes see on?");
             Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle psühhiaatrikliinikust, Dell'i linnast, teie kaksikuga seoses.");
+            Console.WriteLine("*Helistaja*: Tervist, mina olen Tatjana, helistan Ruthle psühiaatrikliinikust, Dell'i linnast, teie kaksikuga seoses.");
             Console.WriteLine("*Helistaja*: Nimelt on teie kaksikul, Alex Lee Epp'il avastatud eluohtlik haigus, mille ostmiseks meil õigust ja rahalist toetust ei ole.");
             Console.WriteLine("*Helistaja*: Kuna tal endal sissetulekut ei ole, siis ei saa ta rohtu soetada, seega me palume teil talle need rohud välja osta.");
             Console.ReadKey();
@@ -31,50 +31,51 @@ namespace m2ng
         public static void Dialo()
         {
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
-            Console.ResetColor();
+            //Console.ForegroundColor = ConsoleColor.Green;
+            ////Console.WriteLine("Tere tulemast '24 tundi'. Palun valige oma karakterile nimi.");
+            //Console.ResetColor();
+
+            //Console.ForegroundColor = ConsoleColor.Green;
+            ////Console.WriteLine("Nüüd sisestage palun vanus.");
+            //Console.ResetColor();
+            ////kasutaja.vanus = int.Parse(Console.ReadLine());
+            //Console.ForegroundColor = ConsoleColor.Green;
+            ////Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
+            //Console.ResetColor();
+            //kasutaja.sugu = Console.ReadLine();
             karakter kasutaja = new karakter();
             kasutaja.nimi = Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Nüüd sisestage palun vanus.");
-            Console.ResetColor();
-            kasutaja.vanus = int.Parse(Console.ReadLine());
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Mis soost te olete? (Palun valige ainult 'naine' või 'mees'!)");
-            Console.ResetColor();
-            kasutaja.sugu = Console.ReadLine();
             Console.Clear();
 
-            ////var kysimus = "";
+            var kysimus = "";
 
-            //////Console.WriteLine("\nTere tulemast '24 tundi'.\n\n");
+            Console.WriteLine("\nTere tulemast '24 tundi'.\n\n");
 
-            ////do
-            ////{
-            ////    Console.WriteLine("Palun valige oma karakterile nimi (min. 5 tähte).");
-            ////    kysimus = Console.ReadLine();
-            ////} while (kysimus.Length < 5);
-            ////kasutaja.nimi = kysimus;
+            do
+            {
+                Console.WriteLine("Palun valige oma karakterile nimi (min.  täht).");
+                kysimus = Console.ReadLine();
+            } while (kysimus.Length < 1);
+            kasutaja.nimi = kysimus;
 
-            ////var vanus = 0;
-            ////do
-            ////{
-            ////    Console.WriteLine("Tere {0}. Sisestage palun oma vanus.", kasutaja.nimi);
-            ////    kysimus = Console.ReadLine();
-            ////} while (!int.TryParse(kysimus, out vanus) || vanus < 16);
-            ////kasutaja.vanus = vanus;
-            ////Console.WriteLine("Rõõm tutvuda sinuga {0} aastane {1}.", kasutaja.vanus, kasutaja.nimi);
-            ////do
-            ////{
-            ////    Console.WriteLine("Mis soost te olete? ('naine' või 'mees')");
-            ////    kysimus = Console.ReadLine();
-            ////} while (kysimus.ToLower() != "naine" && kysimus.ToLower() != "mees");
+            var vanus = 0;
+            do
+            {
+                Console.WriteLine("Tere {0}. Sisestage palun oma vanus.", kasutaja.nimi);
+                kysimus = Console.ReadLine();
+            } while (!int.TryParse(kysimus, out vanus));
+            kasutaja.vanus = vanus;
+            Console.WriteLine("Rõõm tutvuda sinuga {0} aastane {1}.", kasutaja.vanus, kasutaja.nimi);
+            do
+            {
+                Console.WriteLine("Mis soost te olete? ('naine' või 'mees')");
+                kysimus = Console.ReadLine();
+            } while (kysimus.ToLower() != "naine" && kysimus.ToLower() != "mees");
 
-            ////kasutaja.sugu = kysimus.ToLower();
+            kasutaja.sugu = kysimus.ToLower();
 
-            ////Console.Clear();
-            ////Ekraan.Tervitus();
+            Console.Clear();
+            //Ekraan.Tervitus();
 
             Console.WriteLine("*Ärkad telefoni helina peale. Vaatad kella, kell on 7:00, otsustad kõnet ignoreerida.*");
             Console.ReadKey();
