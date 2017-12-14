@@ -17,9 +17,10 @@ namespace m2ng
             TextFile hullumaja = new TextFile(@"..\..\info\hullumaja.dialo.txt");
             Console.WriteLine(hullumaja.getText());
 
-
+            
             path = @"../../../Invetory.txt";
             File.Delete(path);
+            pood.poes();
 
             //ASCII
             Console.ForegroundColor = ConsoleColor.Yellow;
