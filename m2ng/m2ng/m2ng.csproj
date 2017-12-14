@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="info\aptjek.txt" />
     <Content Include="info\ascii.txt" />
+    <Content Include="info\pilt.txt" />
     <Content Include="info\raha.txt" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
