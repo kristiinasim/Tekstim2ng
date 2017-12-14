@@ -14,14 +14,23 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
-            
+
+
             path = @"../../../Invetory.txt";
             File.Delete(path);
-            
+
             //ASCII
             Console.ForegroundColor = ConsoleColor.Yellow;
-            
+
             string pilt = System.IO.File.ReadAllText(@"../../../pilt.txt");
+
+            path = @"../../../Invetory.txt";
+            File.Delete(path);
+
+            //ASCII
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string pilt = System.IO.File.ReadAllText(@"../../../../pilt.txt");
+
             Console.WriteLine(pilt);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Et mängus edasi liikuda, pead vajutama suvalist klahvi.");
@@ -45,51 +54,41 @@ namespace m2ng
             //Linnas. Alates teisest karakterist.
             linna.linn();
             //Apteek
+
+            TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
+            Console.WriteLine(ascii.getText());
+            //Apteek ja rohud
+            TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
+            Console.WriteLine(aptjek.getText());
+            Console.ReadLine();
+            /////Apteek tekst
             apteek.apt();
+            //Poes rotte püüdmas
+            pood.poes();
+            //Apteeki tagasi, enne hullumaja
+            apteek2.tagasi();
+
 
             //Console.ReadLine();
 
 
+            // !LÄHEB APTEEKI!
+            // !OTSIB TÖÖD + RAHA
+            // !HULLUMAJA OSA!
+            // !KOOPA OSA!
+            // !Tagasi külas!
+
             //Pood
             //Console.WriteLine("PATH : {0}", Directory.GetCurrentDirectory());
-
-                TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
-                Console.WriteLine(ascii.getText());
-                //Apteek ja rohud
-            
-              TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
-              Console.WriteLine(aptjek.getText());
-              Console.ReadLine();
 
 
             //KOOBAS
             Koobas.Kooba();
-
-
-            //raha
-            Console.WriteLine("Hetke saldo : {0}", raha.Saldo());
-            //kui soovid raha juurde lisada
-            raha.Muuda(10.3F);
-
-            Console.WriteLine("Hetke saldo : {0}", raha.Saldo());
-            bool jaak = false;
-            do
-            {
-                //kui soovid raha ära võtta
-                jaak = raha.Muuda(-5.0F);
-                Console.WriteLine("Veel on raha : {0}", raha.Saldo());
-
-
-            } while (jaak);
-
-            Console.ReadLine();
-
         }
-
-
-
     }
+    
     }
+
 
 
 

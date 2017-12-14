@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="apteek.cs" />
+    <Compile Include="apteek2.cs" />
     <Compile Include="dialoog.cs" />
     <Compile Include="Invetuur.cs" />
     <Compile Include="karakter.cs" />
@@ -69,6 +70,7 @@
   <ItemGroup>
     <Content Include="info\aptjek.txt" />
     <Content Include="info\ascii.txt" />
+    <Content Include="info\pilt.txt" />
     <Content Include="info\raha.txt" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
