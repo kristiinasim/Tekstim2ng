@@ -44,11 +44,23 @@ namespace m2ng
             //Linnas. Alates teisest karakterist.
             linna.linn();
             //Apteek
+
+            TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
+            Console.WriteLine(ascii.getText());
+            //Apteek ja rohud
+            TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
+            Console.WriteLine(aptjek.getText());
+            Console.ReadLine();
+            /////Apteek tekst
             apteek.apt();
+            //Poes rotte püüdmas
+            pood.poes();
+            //Apteeki tagasi, enne hullumaja
+            apteek2.tagasi();
+
 
             //Console.ReadLine();
 
-            lennujaam.Lennujaam();
 
             // !LÄHEB APTEEKI!
             // !OTSIB TÖÖD + RAHA
@@ -59,14 +71,6 @@ namespace m2ng
             //Pood
             //Console.WriteLine("PATH : {0}", Directory.GetCurrentDirectory());
             
-            TextFile ascii = new TextFile(@"..\..\info\ascii.txt");
-            Console.WriteLine(ascii.getText());
-            //Apteek ja rohud
-            
-            TextFile aptjek = new TextFile(@"..\..\info\aptjek.txt");
-            Console.WriteLine(aptjek.getText());
-
-            Console.ReadLine();
 
             //KOOBAS
             Koobas.Kooba();
