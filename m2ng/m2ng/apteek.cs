@@ -46,7 +46,7 @@ namespace m2ng
                 Console.ReadKey();
                 Console.WriteLine("Aitäh! Näeme veel!");
                 Console.ReadKey();
-                Console.WriteLine("*Mõnda aega kõndides jõuangi lilledega kaunistatud poeni.*");
+                Console.WriteLine("*Mõnda aega kõndides jõuangi lilledega kaunistatud poeni. Astun sisse.*");
                 Console.ReadKey();
                 
 
@@ -58,7 +58,7 @@ namespace m2ng
                 Console.WriteLine("Tere! Kas saaksite mind aidata? Mul on vaja osta oma kaksikule elutähtis ravim, kuid ma kaotasin oma rahakoti ära.");
                 Console.WriteLine("*Naine:* Mina teid kahjuks rahaga aidata ei saa, kuid siit veidi edasi on üks pood. Ma tean, et omanik on rottidega hädas ning kui te teda aitate, siis ehk ta maksab teile.");
                 Console.WriteLine("Suur tänu teile!");
-                Console.WriteLine("*Varsti näengi poodi.*");
+                Console.WriteLine("*Varsti näengi poodi. Astun sisse.*");
                 Console.ReadLine();
             }
 

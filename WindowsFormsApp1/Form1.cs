@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             PictureBox pb1 = new PictureBox();
-            pb1.ImageLocation = @"C:\Users\opilane\Desktop\city.jpg";
+            pb1.ImageLocation = @"C:\Users\opilane\Desktop\9.jpg";
             pb1.SizeMode = PictureBoxSizeMode.AutoSize;
         }
 
