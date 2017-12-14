@@ -94,9 +94,9 @@ namespace m2ng
         public static void Kooba()
         {
             path = @"../../../Invetory.txt";
-            suund:
             Console.WriteLine("Kanalisatsiooni läbi oled sattunud koopasse.");
             Console.ReadKey();
+            suund:
             Console.WriteLine("Võimalik on minna kas 'paremale' või 'vasakule'.");
             string suund = Console.ReadLine();
             Console.Clear();

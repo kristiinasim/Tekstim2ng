@@ -72,7 +72,9 @@ namespace m2ng
             }
             else goto valik9;
             Console.ReadKey();
+            Console.Clear();
             Console.WriteLine("Juhiste järgi kõndides näengi suurt valget maja. Jah, see ongi psühhiaatrikliinik!");
+            Console.ReadLine();
         }
     }
 }

@@ -78,9 +78,11 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Poeomanik*: Kas soovid midagi osta? Meil on näiteks shokolaadi, vett, plaastreid ja muudki.");
             Console.ReadKey();
+            Console.ResetColor();
             string ascii = System.IO.File.ReadAllText(@"..\..\info\ascii.txt");
             Console.WriteLine(ascii);
             Console.ReadKey();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("*Poeomanik*: Olen kuulnud, et toit taastab staminat..");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Green;

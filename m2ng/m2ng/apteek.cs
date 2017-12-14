@@ -33,6 +33,7 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Mida ma küll edasi teen...*");
             Console.ReadKey();
+            valik6:
             Console.WriteLine("'küsin nõu' või 'lähen ära'");
             var valik6 = Console.ReadLine();
             Console.Clear();
@@ -55,7 +56,7 @@ namespace m2ng
                 Console.WriteLine("*Mõnda aega kõndides jõuangi lilledega kaunistatud poeni. Astun sisse.*");
                 Console.ReadKey();
             }
-            if (valik6 == "lähen ära")
+            else if (valik6 == "lähen ära")
             {
                 Console.WriteLine("*Kõnnin aeglaselt apteekist välja* Nüüd pean mõtlema, mis edasi teha.");
                 Console.ReadKey();
@@ -74,8 +75,10 @@ namespace m2ng
                 string poodv = System.IO.File.ReadAllText(@"..\..\info\poodv.txt");
                 Console.WriteLine(poodv);
                 Console.WriteLine("*Astun sisse.*");
-                Console.ReadLine();
+                Console.ReadKey();
+                Console.Clear();
             }
+            else goto valik6;
         }
     }
 }
