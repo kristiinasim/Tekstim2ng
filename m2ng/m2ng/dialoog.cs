@@ -90,8 +90,6 @@ namespace m2ng
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
                 Console.ResetColor();
-
-                Console.WriteLine("*Helistaja*: Tere, kas teie olete {0}?", kasutaja.nimi);
                 dialoog.Dia();
             }
             else if (telk6n1 == "ignoreeri")
