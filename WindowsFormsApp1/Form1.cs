@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             PictureBox pb1 = new PictureBox();
-            pb1.ImageLocation = @"C:\Users\opilane\Desktop\9.jpg";
+            pb1.ImageLocation = @"../../9.jpg";
             pb1.SizeMode = PictureBoxSizeMode.AutoSize;
         }
 
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         {
 
             Process p = new Process();
-            Process.Start(@"C:\Users\opilane\Documents\GitHub\Tekstim2ng\m2ng\m2ng\bin\Debug\m2ng.exe");
+            Process.Start(@"C:../../../../../../m2ng.exe");
             this.Close();
 
         }
