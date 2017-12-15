@@ -35,6 +35,7 @@ namespace m2ng
             Console.ReadKey();
             Console.Clear();
 
+           
             dialoog.Dialo();
             lennujaam.JooKohvi();
             lennujaam.Lennujaam();
