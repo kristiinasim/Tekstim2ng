@@ -425,7 +425,8 @@ namespace m2ng
         {
             karakter vaenlane = new karakter();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Koopaelanuk tuleb kallale!");
+            Console.WriteLine("Koopaelanik tuleb kallale!");
+            rynne:
             Console.WriteLine("Lööd 'pähe'(-30 staminat) või 'kõhtu'(-20 staminat)");
             Console.ResetColor();
             string vas1 = Console.ReadLine();
@@ -495,6 +496,7 @@ namespace m2ng
                     else goto vas2;
                 }
             }
+            else goto rynne;
         }
     }
 }

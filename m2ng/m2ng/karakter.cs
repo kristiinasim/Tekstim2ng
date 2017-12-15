@@ -47,6 +47,8 @@ namespace m2ng
 
         public static void Kaotasid()
         {
+            Console.ReadKey();
+            Console.Clear();
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -57,6 +59,8 @@ namespace m2ng
 
         public static void Voitsid()
         {
+            Console.ReadKey();
+            Console.Clear();
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Green;

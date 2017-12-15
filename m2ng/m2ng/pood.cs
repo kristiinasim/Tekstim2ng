@@ -76,7 +76,7 @@ namespace m2ng
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.ReadKey();
-            Console.WriteLine("*Poeomanik*: Kas soovid midagi osta? Meil on näiteks shokolaadi, vett, plaastreid ja muudki.");
+            Console.WriteLine("*Poeomanik*: Kas soovid midagi osta? Meil on näiteks šokolaadi, vett, plaastreid ja muudki.");
             Console.ReadKey();
             Console.ResetColor();
             string ascii = System.IO.File.ReadAllText(@"..\..\info\ascii.txt");
@@ -98,7 +98,7 @@ namespace m2ng
             {
                 ost:
                 Console.WriteLine("*osta midagi neist:*");
-                Console.WriteLine("'1': sokolaad - 4 eurot");
+                Console.WriteLine("'1': šokolaad - 4 eurot");
                 Console.WriteLine("'2': pudel vett - 3 eurot");
                 Console.WriteLine("'3': pakk küpsiseid - 6 eurot");
                 Console.WriteLine("'4': paki plaastreid - 5 eurot");

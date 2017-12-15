@@ -35,9 +35,7 @@ namespace m2ng
             Console.WriteLine("Pole midagi. Ikka juhtub.");
             Console.ReadKey();
             Console.WriteLine("Mina: Siin on ravimid, mida soovisite. Nägemist!");
-            Console.ReadKey();
             karakter.Voitsid();
-            Console.ReadKey();
         }
     }
 }
