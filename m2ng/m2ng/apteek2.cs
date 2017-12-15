@@ -12,7 +12,7 @@ namespace m2ng
         public static string path;
         public static void tagasi()
         {
-            path = @"../../../Invetory.txt";
+            path = @"../../info/Invetory.txt";
             Console.Clear();
             Console.WriteLine("*Apteeki sisenedes, kell seinal näitab nüüd 16:46:*");
             Console.ReadKey();

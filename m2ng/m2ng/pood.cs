@@ -12,7 +12,7 @@ namespace m2ng
         public static string path;
         public static void poes()
         {
-            path = @"../../../Invetory.txt";
+            path = @"../../info/Invetory.txt";
             Console.WriteLine("Tere, poeomanik! Kuulsin, et teil on tööd pakkuda!");
             Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.DarkCyan;

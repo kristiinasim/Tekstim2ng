@@ -23,9 +23,6 @@ namespace m2ng
         public static int raha { get; set; }
         public static int HP { get; set; }
         public static int EnemyHP { get; set; }
-
-        public static string path1 = @"../../../Stamina.txt";
-
         public static void Staminacheck()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;

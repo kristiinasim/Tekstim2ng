@@ -18,7 +18,7 @@ namespace m2ng
 
             //////Mäng järjekorras--
             karakter kasutaja = new karakter();
-            path = @"../../../Invetory.txt";
+            path = @"../../info/Invetory.txt";
             File.Delete(path);
             string tekst = " ";
             File.AppendAllText(path, tekst);

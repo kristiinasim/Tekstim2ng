@@ -93,7 +93,7 @@ namespace m2ng
         //--KOOBAS--
         public static void Kooba()
         {
-            path = @"../../../Invetory.txt";
+            path = @"../../info/Invetory.txt";
             Console.WriteLine("Kanalisatsiooni läbi oled sattunud koopasse.");
             Console.ReadKey();
             suund:
@@ -284,7 +284,7 @@ namespace m2ng
 
         public static void S88()
         {
-            path = @"../../../Invetory.txt";
+            path = @"../../info/Invetory.txt";
             Console.Clear();
             Console.WriteLine("Sul ei ole piisavalt staminat!");
             Console.WriteLine("Stamina taastamiseks söö/joo midagi, kui sul on seljakotis midagi, mida süüa/juua.");
