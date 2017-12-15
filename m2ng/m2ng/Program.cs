@@ -17,32 +17,32 @@ namespace m2ng
             ////// !Tagasi külas!
 
             //////Mäng järjekorras--
-            karakter kasutaja = new karakter();
-            path = @"../../info/Invetory.txt";
-            File.Delete(path);
-            string tekst = " ";
-            File.AppendAllText(path, tekst);
-            
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            string pilt = System.IO.File.ReadAllText(@"..\..\info\pilt.txt");
-            Console.WriteLine(pilt);
+            //karakter kasutaja = new karakter();
+            //path = @"../../info/Invetory.txt";
+            //File.Delete(path);
+            //string tekst = " ";
+            //File.AppendAllText(path, tekst);
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\nEt mängus edasi liikuda, pead vajutama suvalist klahvi.");
-            Console.WriteLine("(Välja arvatud siis, kui tuleb kirjutada vastus.)");
-            Console.WriteLine("Mängu käigus on soovitatav koguda võimalikult palju staminat.");
-            Console.ResetColor();
-            Console.ReadKey();
-            Console.Clear();
+            //Console.ForegroundColor = ConsoleColor.Yellow;
+            //string pilt = System.IO.File.ReadAllText(@"..\..\info\pilt.txt");
+            //Console.WriteLine(pilt);
 
-            dialoog.Dialo();
-            lennujaam.JooKohvi();
-            lennujaam.Lennujaam();
-            linna.linnas();
-            linna.linn();
-            apteek.apt();
-            pood.poes();
-            apteek2.tagasi();
+            //Console.ForegroundColor = ConsoleColor.Green;
+            //Console.WriteLine("\nEt mängus edasi liikuda, pead vajutama suvalist klahvi.");
+            //Console.WriteLine("(Välja arvatud siis, kui tuleb kirjutada vastus.)");
+            //Console.WriteLine("Mängu käigus on soovitatav koguda võimalikult palju staminat.");
+            //Console.ResetColor();
+            //Console.ReadKey();
+            //Console.Clear();
+
+            //dialoog.Dialo();
+            //lennujaam.JooKohvi();
+            //lennujaam.Lennujaam();
+            //linna.linnas();
+            //linna.linn();
+            //apteek.apt();
+            //pood.poes();
+            //apteek2.tagasi();
             Hullumaja.hullumaja();
             Koobas.Kooba();
             lopp.Lopp();

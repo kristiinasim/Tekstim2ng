@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace m2ng
-{
+
     class Hullumaja
     {
         public static void hullumaja()
@@ -28,24 +28,19 @@ namespace m2ng
             vastus:
             Console.WriteLine("Kas alustad kaksikuga rääkimist või ootad kuni tema alustab? 'alustan' või 'ootan'");
             string vastus = Console.ReadLine();
+        while (true)
+        {
             if (vastus == "alustan")
             {
                 Console.WriteLine("*Mina*: Tsau! Kuidas sul siin läheb ? ");
+                break;
             }
             else if (vastus == "ootan")
             {
                 Console.WriteLine("*Ootan millal ta ise hakkab rääkima minuga.*");
+                break;
             }
-            else goto vastus;
-            Console.ReadKey();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("*Kaksik lööb su toimetuks, vahetab sinu riided enda omade vastu ja põgeneb ruumist.*");
-            Console.ReadKey();
-            Console.WriteLine("Medõde siseneb ning aitab sind püsti. Viib su oma kabinetti, arvates, et sa oled oma kaksik Alex.");
-            Console.ResetColor();
-            Console.ReadKey();
-            Console.WriteLine("Ütled, et lähed WC-sse. Teel sinna leiad põgenemiseks tee kanalisatsiooni, mis on üllatavalt puhas.");
-            Console.ReadKey();
+        }
         }
     }
 }
