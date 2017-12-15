@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace m2ng
-
+{ 
     class Hullumaja
     {
         public static void hullumaja()
@@ -39,6 +39,10 @@ namespace m2ng
             {
                 Console.WriteLine("*Ootan millal ta ise hakkab rääkima minuga.*");
                 break;
+            }
+            else
+            {
+                continue;
             }
         }
         }
