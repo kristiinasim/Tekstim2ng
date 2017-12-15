@@ -14,9 +14,9 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
-            ////// !Tagasi külas!
+            // !Tagasi külas!
 
-            //////Mäng järjekorras--
+            //Mäng järjekorras--
             karakter kasutaja = new karakter();
             path = @"../../info/Invetory.txt";
             File.Delete(path);

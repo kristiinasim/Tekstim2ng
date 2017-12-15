@@ -26,22 +26,29 @@ namespace m2ng
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Hetkene stamina: " + karakter.stamina);
             Console.ResetColor();
-            kohvi:
-            Console.WriteLine("Joo enne kodust lahkumist kohvi (+50 stamina)? 'jah' või 'ei'");
-            string jookohvi = Console.ReadLine();
-            if (jookohvi == "jah")
+            while (true)
             {
-                Console.WriteLine("Jood kiiresti tassi kohvi ja saad juurde +50 staminat.");
-                karakter.stamina += 50;
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Hetkene stamina: " + karakter.stamina);
-                Console.ResetColor();
+                Console.WriteLine("Joo enne kodust lahkumist kohvi (+50 stamina)? 'jah' või 'ei'");
+                string jookohvi = Console.ReadLine();
+                if (jookohvi == "jah")
+                {
+                    Console.WriteLine("Jood kiiresti tassi kohvi ja saad juurde +50 staminat.");
+                    karakter.stamina += 50;
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Hetkene stamina: " + karakter.stamina);
+                    Console.ResetColor();
+                    break;
+                }
+                else if (jookohvi == "ei")
+                {
+                    Console.WriteLine("Jätad hommikuse kohvi joomata.");
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
             }
-            else if (jookohvi == "ei")
-            {
-                Console.WriteLine("Jätad hommikuse kohvi joomata.");
-            }
-            else goto kohvi;
         }
     }
 }
