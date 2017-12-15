@@ -51,7 +51,6 @@ namespace m2ng
             Console.ReadKey();
             Console.ResetColor();
 
-            valik9:
             while (true)
             {
                 Console.WriteLine("Kas 'tänan viisakalt' või 'jooksen välja'?");

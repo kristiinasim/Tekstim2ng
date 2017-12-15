@@ -103,70 +103,70 @@ namespace m2ng
             Console.WriteLine("'osta' või 'ei aitäh'");
             string osta = Console.ReadLine();
             Console.Clear();
-            if (osta == "osta")
-            {
-                
-                Console.WriteLine("*osta midagi neist:*");
-                Console.WriteLine("'1': šokolaad - 4 eurot");
-                Console.WriteLine("'2': pudel vett - 3 eurot");
-                Console.WriteLine("'3': pakk küpsiseid - 6 eurot");
-                Console.WriteLine("'4': paki plaastreid - 5 eurot");
-                var valik8 = Console.ReadLine();
-                Console.Clear();
-                if (valik8 == "1")
+                if (osta == "osta")
                 {
-                    if (karakter.raha >= 4)
+
+                    Console.WriteLine("*osta midagi neist:*");
+                    Console.WriteLine("'1': šokolaad - 4 eurot");
+                    Console.WriteLine("'2': pudel vett - 3 eurot");
+                    Console.WriteLine("'3': pakk küpsiseid - 6 eurot");
+                    Console.WriteLine("'4': paki plaastreid - 5 eurot");
+                    var valik8 = Console.ReadLine();
+                    Console.Clear();
+                    if (valik8 == "1")
                     {
-                        karakter.raha -= 4;
-                        string tekst = "\nsokolaad";
-                        File.AppendAllText(path, tekst);
-                        Invetuur.Invcheck();
-                        karakter.Rahacheck();
+                        if (karakter.raha >= 4)
+                        {
+                            karakter.raha -= 4;
+                            string tekst = "\nsokolaad";
+                            File.AppendAllText(path, tekst);
+                            Invetuur.Invcheck();
+                            karakter.Rahacheck();
+                        }
+                        else if (karakter.raha < 4)
+                            karakter.Poleraha();
                     }
-                    else if (karakter.raha < 4)
-                        karakter.Poleraha();
-                }
-                else if (valik8 == "2")
-                {
-                    if (karakter.raha >= 3)
+                    else if (valik8 == "2")
                     {
-                        karakter.raha -= 3;
-                        string tekst = "\nveepudel";
-                        File.AppendAllText(path, tekst);
-                        Invetuur.Invcheck();
-                        karakter.Rahacheck();
+                        if (karakter.raha >= 3)
+                        {
+                            karakter.raha -= 3;
+                            string tekst = "\nveepudel";
+                            File.AppendAllText(path, tekst);
+                            Invetuur.Invcheck();
+                            karakter.Rahacheck();
+                        }
+                        else if (karakter.raha < 3)
+                            karakter.Poleraha();
                     }
-                    else if (karakter.raha < 3)
-                        karakter.Poleraha();
-                }
-                else if (valik8 == "3")
-                {
-                    if (karakter.raha >= 6)
+                    else if (valik8 == "3")
                     {
-                        karakter.raha -= 6;
-                        string tekst = "\nkypsisepakk";
-                        File.AppendAllText(path, tekst);
-                        Invetuur.Invcheck();
-                        karakter.Rahacheck();
+                        if (karakter.raha >= 6)
+                        {
+                            karakter.raha -= 6;
+                            string tekst = "\nkypsisepakk";
+                            File.AppendAllText(path, tekst);
+                            Invetuur.Invcheck();
+                            karakter.Rahacheck();
+                        }
+                        else if (karakter.raha < 6)
+                            karakter.Poleraha();
                     }
-                    else if (karakter.raha < 6)
-                        karakter.Poleraha();
-                }
-                else if (valik8 == "4")
-                {
-                    if (karakter.raha >= 5)
+                    else if (valik8 == "4")
                     {
-                        karakter.raha -= 5;
-                        string tekst = "\npakk plaastreid";
-                        File.AppendAllText(path, tekst);
-                        Invetuur.Invcheck();
-                        karakter.Rahacheck();
+                        if (karakter.raha >= 5)
+                        {
+                            karakter.raha -= 5;
+                            string tekst = "\npakk plaastreid";
+                            File.AppendAllText(path, tekst);
+                            Invetuur.Invcheck();
+                            karakter.Rahacheck();
+                        }
+                        else if (karakter.raha < 5)
+                            karakter.Poleraha();
                     }
-                    else if (karakter.raha < 5)
-                        karakter.Poleraha();
-                }
-                else continue;
-                
+                    else continue;
+
                     while (true)
                     {
 
@@ -197,10 +197,10 @@ namespace m2ng
                         }
                         else continue;
                     }
-            }
+                }
                 else if (kasBreakin == true)
                     break;
-               
+
                 else if (osta == "ei aitäh")
                 {
                     Console.WriteLine("Ei aitäh, ma parem liigun edasi.");
@@ -215,6 +215,7 @@ namespace m2ng
                 }
                 else continue;
             }
+            
         }
     }
 }

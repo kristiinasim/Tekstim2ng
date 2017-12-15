@@ -30,8 +30,8 @@ namespace m2ng
             {
                 Console.WriteLine("Kas alustad kaksikuga rääkimist või ootad kuni tema alustab? 'alustan' või 'ootan'");
                 string vastus = Console.ReadLine();
-            if (vastus == "alustan")
-            {
+                if (vastus == "alustan")
+                {
                     Console.WriteLine("*Mina*: Tsau! Kuidas sul siin läheb ? ");
                     break;
                 }
@@ -44,8 +44,13 @@ namespace m2ng
                 {
                     continue;
                 }
-        
             }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Kaksik lööb sind ootamatult oimetuks ning põgeneb toast. Toibud paari minuti pärast.");
+            Console.WriteLine("Medõde aitab su püsti ning arvatakse, et sa oled oma kaksik.");
+            Console.WriteLine("Küsid, et minna vetsu ning põgened kanalisatsiooni.");
+            Console.ResetColor();
+            Console.ReadKey();
         }
     }
 }
