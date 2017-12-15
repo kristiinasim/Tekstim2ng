@@ -18,10 +18,6 @@ namespace m2ng
             //////Mäng järjekorras--
 
 
-            // !Tagasi külas!
-
-            //Mäng järjekorras--
-
             karakter kasutaja = new karakter();
             path = @"../../info/Invetory.txt";
             File.Delete(path);
@@ -40,23 +36,20 @@ namespace m2ng
             Console.ReadKey();
             Console.Clear();
 
-            
-            
-            apteek.apt(); //-DONE
-            pood.poes(); //-DONE
+            dialoog.Dialo();
+            lennujaam.JooKohvi();
+            lennujaam.Lennujaam();
+            linna.linnas();
+            linna.linn();
+            apteek.apt();
+            pood.poes();
             apteek2.tagasi();
-            Hullumaja.hullumaja(); //-DONE
-            Koobas.Kooba(); //-DONE
-            lopp.Lopp(); //-DONE
-            dialoog.Dialo(); //DONE
-            lennujaam.JooKohvi(); //-DONE
-            lennujaam.Lennujaam(); //-DONE
-            linna.linnas(); 
-            linna.linn(); //-DONE
+            Hullumaja.hullumaja();
+            Koobas.Kooba();
+            lopp.Lopp();
         }
     }
-    
-    }
+}
 
 
 

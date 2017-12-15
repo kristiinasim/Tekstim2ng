@@ -10,6 +10,7 @@ namespace m2ng
     {
         public static void Rott()
         {
+
             Console.WriteLine("Näed koopas liikumas rotti.");
             Console.ReadKey();
             Console.WriteLine("Üritad rotti jälitada, kuid ta paneb plehku.");
