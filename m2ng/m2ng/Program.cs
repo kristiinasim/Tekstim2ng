@@ -14,9 +14,14 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
-            ////// !Tagasi külas!
 
             //////Mäng järjekorras--
+
+
+            // !Tagasi külas!
+
+            //Mäng järjekorras--
+
             karakter kasutaja = new karakter();
             path = @"../../info/Invetory.txt";
             File.Delete(path);
@@ -35,17 +40,19 @@ namespace m2ng
             Console.ReadKey();
             Console.Clear();
 
-            dialoog.Dialo();
-            lennujaam.JooKohvi();
-            lennujaam.Lennujaam();
-            linna.linnas();
-            linna.linn();
+            
+            
             apteek.apt();
             pood.poes();
             apteek2.tagasi();
             Hullumaja.hullumaja();
             Koobas.Kooba();
             lopp.Lopp();
+            dialoog.Dialo();
+            lennujaam.JooKohvi();
+            lennujaam.Lennujaam();
+            linna.linnas();
+            linna.linn();
         }
     }
     

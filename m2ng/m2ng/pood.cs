@@ -23,7 +23,6 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Poeomanik juhatab mu keldrisse*");
             Console.ReadKey();
-            valik7:
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -74,7 +73,9 @@ namespace m2ng
                     karakter.raha += 35;
                     break;
                 }
+
             }
+
             Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Sul on raha: " + karakter.raha);

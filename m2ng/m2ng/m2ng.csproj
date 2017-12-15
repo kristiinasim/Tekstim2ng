@@ -74,7 +74,7 @@
     <Content Include="info\apteekvaljast.txt" />
     <Content Include="info\aptjek.txt" />
     <Content Include="info\ascii.txt" />
-    <Content Include="info\Invetory.txt.txt" />
+    <Content Include="info\Invetory.txt" />
     <Content Include="info\mega.txt" />
     <Content Include="info\pilt.txt" />
     <Content Include="info\poodv.txt" />
