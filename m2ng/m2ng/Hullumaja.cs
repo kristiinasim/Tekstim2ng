@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace m2ng
 { 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fbf1c37744e2e418653cef25dd7be43e48f09a8
     class Hullumaja
     {
         public static void hullumaja()
@@ -44,6 +47,10 @@ namespace m2ng
                 {
                     continue;
                 }
+            }
+            else
+            {
+                continue;
             }
         }
     }

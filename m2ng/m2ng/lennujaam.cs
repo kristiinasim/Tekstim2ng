@@ -44,6 +44,13 @@ namespace m2ng
                     Console.WriteLine("Jätad hommikuse kohvi joomata.");
                     break;
                 }
+<<<<<<< HEAD
+=======
+                else
+                {
+                    continue;
+                }
+>>>>>>> 2fbf1c37744e2e418653cef25dd7be43e48f09a8
             }
         }
     }
