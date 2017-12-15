@@ -33,13 +33,13 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Mida ma küll edasi teen...*");
             Console.ReadKey();
-            valik6:
-            Console.WriteLine("'küsin nõu' või 'lähen ära'");
-            Console.Clear();
             while (true)
             {
+                Console.WriteLine("'küsin nõu' või 'lähen ära'");
                 
-                var valik6 = Console.ReadLine().ToLower();
+
+                    var valik6 = Console.ReadLine().ToLower();
+                Console.Clear();
                 if (valik6 == "küsin nõu")
                 {
                     Console.WriteLine("Kas te oskate mulle nõu anda, mida ma tegema peaksin?");
@@ -58,7 +58,9 @@ namespace m2ng
                     Console.ReadKey();
                     Console.WriteLine("*Mõnda aega kõndides jõuangi lilledega kaunistatud poeni. Astun sisse.*");
                     Console.ReadKey();
+                    break;
                 }
+
                 else if (valik6 == "lähen ära")
                 {
                     Console.WriteLine("*Kõnnin aeglaselt apteekist välja* Nüüd pean mõtlema, mis edasi teha.");
@@ -80,14 +82,16 @@ namespace m2ng
                     Console.WriteLine("*Astun sisse.*");
                     Console.ReadKey();
                     Console.Clear();
+                    break;
                 }
                 else
                 {
                     continue;
                 }
 
+                
+
             }
-            
         }
     }
 }
