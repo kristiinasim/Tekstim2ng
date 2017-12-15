@@ -41,8 +41,8 @@ namespace m2ng
             Console.Clear();
 
 
-            
-            
+
+
             apteek.apt();
             pood.poes();
             apteek2.tagasi();

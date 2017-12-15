@@ -24,6 +24,7 @@ namespace m2ng
             Console.ResetColor();
             karakter.Rahacheck();
             Console.ReadKey();
+
             if (karakter.raha >= 20)
             {
                 karakter.raha -= 20;
@@ -49,28 +50,38 @@ namespace m2ng
             Console.WriteLine("*Apteeker:* Oh, see on kohe siit üle tee ning vasakule!");
             Console.ReadKey();
             Console.ResetColor();
+
             valik9:
-            Console.WriteLine("Kas 'tänan viisakalt' või 'jooksen välja'?");
-            var valik9 = Console.ReadLine();
-            Console.Clear();
-            if (valik9 == "tänan viisakalt")
+            while (true)
             {
-                Console.WriteLine("Suur aitäh teile ja nägemist!");
-                Console.ReadKey();
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Apteeker:* Palun-palun, siin on sulle tee peale üks šokolaad, sul läheb energiat vaja!");
-                Console.ReadKey();
-                Console.ResetColor();
-                string tekst = "\nsokolaad";
-                File.AppendAllText(path, tekst);
-                Invetuur.Invcheck();
-                Console.WriteLine("Tänan, nägemist! *Lahkun.*");
+                Console.WriteLine("Kas 'tänan viisakalt' või 'jooksen välja'?");
+                var valik9 = Console.ReadLine();
+                Console.Clear();
+
+                if (valik9 == "tänan viisakalt")
+                {
+                    Console.WriteLine("Suur aitäh teile ja nägemist!");
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("*Apteeker:* Palun-palun, siin on sulle tee peale üks šokolaad, sul läheb energiat vaja!");
+                    Console.ReadKey();
+                    Console.ResetColor();
+                    string tekst = "\nsokolaad";
+                    File.AppendAllText(path, tekst);
+                    Invetuur.Invcheck();
+                    Console.WriteLine("Tänan, nägemist! *Lahkun.*");
+                    break;
+                }
+                else if (valik9 == "jooksen välja")
+                {
+                    Console.WriteLine("*Torman uksest välja:* Nüüd tuleb kiirustada!");
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
             }
-            else if (valik9 == "jooksen välja")
-            {
-                Console.WriteLine("*Torman uksest välja:* Nüüd tuleb kiirustada!");
-            }
-            else goto valik9;
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("Juhiste järgi kõndides näengi suurt valget maja. Jah, see ongi psühhiaatrikliinik!");
