@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="pilt.txt" />
+    <Content Include="Properties\info\pilt.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
