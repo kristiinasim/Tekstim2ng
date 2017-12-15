@@ -24,52 +24,57 @@ namespace m2ng
             Console.WriteLine("*Poeomanik juhatab mu keldrisse*");
             Console.ReadKey();
             valik7:
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("*Poe kelder on rotte täis. Kuidas nad tappa? Kas:");
-            Console.WriteLine("'1': Löön labidaga pähe");
-            Console.WriteLine("'2': Kasutan mürki");
-            Console.WriteLine("'3': Uputan keldri üle");
-            Console.ResetColor();
-            var valik7 = Console.ReadLine();
-            Console.Clear();
-            if (valik7 == "1")
+            while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Tapsid rotid, kuid said neilt hammustada..");
-                Console.ReadKey();
-                Console.WriteLine("Rottide poolt tekitatud hammustus võttis sinult 5 HP maha.");
-                Console.ReadKey();
-                karakter.HP -= 5;
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Järele jäänud HP on: " + karakter.HP);
-                Console.ReadKey();
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                Console.WriteLine("*Poe kelder on rotte täis. Kuidas nad tappa? Kas:");
+                Console.WriteLine("'1': Löön labidaga pähe");
+                Console.WriteLine("'2': Kasutan mürki");
+                Console.WriteLine("'3': Uputan keldri üle");
                 Console.ResetColor();
-                karakter.raha += 45;
+                var valik7 = Console.ReadLine();
+                Console.Clear();
+                if (valik7 == "1")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Tapsid rotid, kuid said neilt hammustada..");
+                    Console.ReadKey();
+                    Console.WriteLine("Rottide poolt tekitatud hammustus võttis sinult 5 HP maha.");
+                    Console.ReadKey();
+                    karakter.HP -= 5;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Järele jäänud HP on: " + karakter.HP);
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                    Console.ResetColor();
+                    karakter.raha += 45;
+                    break;
+                }
+                else if (valik7 == "2")
+                {
+                    Console.WriteLine("Tapsid rotid edukalt! Palju õnne!");
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                    Console.ResetColor();
+                    karakter.raha += 45;
+                    break;
+                }
+                else if (valik7 == "3")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Tapsid küll rotid, kuid kahjustasid veega poeomaniku varusid keldris.");
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
+                    Console.ReadKey();
+                    Console.WriteLine("*Poeomanik*: Kuid kuna sa mu varusid kahjustasid siis võtan ma su tasust 10 eurot maha..");
+                    Console.ResetColor();
+                    karakter.raha += 35;
+                    break;
+                }
             }
-            else if (valik7 == "2")
-            {
-                Console.WriteLine("Tapsid rotid edukalt! Palju õnne!");
-                Console.ReadKey();
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
-                Console.ResetColor();
-                karakter.raha += 45;
-            }
-            else if (valik7 == "3")
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Tapsid küll rotid, kuid kahjustasid veega poeomaniku varusid keldris.");
-                Console.ReadKey();
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Poeomanik*: Oi aitäh, head inimesed siiski veel eksisteerivad! Siin on sulle 45 eurot tasuks.");
-                Console.ReadKey();
-                Console.WriteLine("*Poeomanik*: Kuid kuna sa mu varusid kahjustasid siis võtan ma su tasust 10 eurot maha..");
-                Console.ResetColor();
-                karakter.raha += 35;
-            }
-            else goto valik7;
             Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Sul on raha: " + karakter.raha);

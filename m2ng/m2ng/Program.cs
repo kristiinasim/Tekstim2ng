@@ -22,7 +22,7 @@ namespace m2ng
             File.Delete(path);
             string tekst = " ";
             File.AppendAllText(path, tekst);
-            
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             string pilt = System.IO.File.ReadAllText(@"..\..\info\pilt.txt");
             Console.WriteLine(pilt);
