@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace m2ng
+{ 
 
     class Hullumaja
     {
@@ -25,22 +26,25 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Medõde paneb ukse kinni ning liigub tagasi oma kabinetti.*");
             Console.ReadKey();
-            vastus:
-            Console.WriteLine("Kas alustad kaksikuga rääkimist või ootad kuni tema alustab? 'alustan' või 'ootan'");
-            string vastus = Console.ReadLine();
-        while (true)
-        {
+            while (true)
+            {
+                Console.WriteLine("Kas alustad kaksikuga rääkimist või ootad kuni tema alustab? 'alustan' või 'ootan'");
+                string vastus = Console.ReadLine();
             if (vastus == "alustan")
             {
-                Console.WriteLine("*Mina*: Tsau! Kuidas sul siin läheb ? ");
-                break;
+                    Console.WriteLine("*Mina*: Tsau! Kuidas sul siin läheb ? ");
+                    break;
+                }
+                else if (vastus == "ootan")
+                {
+                    Console.WriteLine("*Ootan millal ta ise hakkab rääkima minuga.*");
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
             }
-            else if (vastus == "ootan")
-            {
-                Console.WriteLine("*Ootan millal ta ise hakkab rääkima minuga.*");
-                break;
-            }
-        }
         }
     }
 }

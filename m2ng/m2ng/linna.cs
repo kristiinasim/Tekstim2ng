@@ -267,12 +267,17 @@ namespace m2ng
                     Console.WriteLine("Oh, kas tõesti! Olen juba 15 minutit siin ringi käinud. Aitäh!");
                     break;
                 }
+                else
+                {
+                    continue;
+                }
+            }
                 Console.Clear();
                 string apteekvaljast = System.IO.File.ReadAllText(@"..\..\info\apteekvaljast.txt");
                 Console.WriteLine(apteekvaljast);
                 Console.WriteLine("*Peale pikka jalutuskäiku jõunagi lõpuks apteeki. Ma ei suuda uskuda, et seda varem üles ei leidnud, kuid mis siis ikka! Nüüd jääb üle vaid veel rohi osta.*");
                 Console.ReadKey();
-            }
+            
         }
     }
 }

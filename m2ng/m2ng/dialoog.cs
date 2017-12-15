@@ -20,7 +20,7 @@ namespace m2ng
             Console.WriteLine("*Helistaja*: Kuna tal endal sissetulekut ei ole, siis ei saa ta rohtu soetada, seega me palume teil talle need rohud välja osta.");
             Console.ReadKey();
             Console.ResetColor();
-            Console.WriteLine("Rohud.. Psühiaatrikliinik.. Mida? Millal ta sinna sattus? Selge, lendan täna sinna.");
+            Console.WriteLine("Rohud.. Psühhiaatrikliinik.. Mida? Millal ta sinna sattus? Selge, lendan täna sinna.");
             Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("*kõne lõpp*");
@@ -70,48 +70,50 @@ namespace m2ng
             Console.ReadKey();
             Console.WriteLine("*Raadio*: Tere hommikust, kell on 07:03. Tõuse ja sära!");
             Console.ReadKey();
-            telk6n1:  
-            Console.WriteLine("*Telefon heliseb uuesti.* 'vasta' või 'ignoreeri'");
-            string telk6n1 = Console.ReadLine();
-            Console.Clear();
-
-            if (telk6n1 == "vasta")
+            while (true)
             {
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
-                Console.ResetColor();
-
-                dialoog.Dia();
-            }
-            else if (telk6n1 == "ignoreeri")
-            {
-                Console.WriteLine("*Ignoreerin kõne, istun laua taha ja kuulan raadiost tulevaid jõululaule.*");
-                Console.ReadKey();
-                telk6n2:
-                Console.WriteLine("*Telefon heliseb uuesti, lähen närvi.* 'vasta' või 'viskan telefoni aknast välja'");
-                string telk6n2 = Console.ReadLine();
+                Console.WriteLine("*Telefon heliseb uuesti.* 'vasta' või 'ignoreeri'");
+                string telk6n1 = Console.ReadLine();
                 Console.Clear();
-                if (telk6n2 == "vasta")
+
+                if (telk6n1 == "vasta")
                 {
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
                     Console.ResetColor();
                     dialoog.Dia();
+                    break;
                 }
-                else if (telk6n2 == "viskan telefoni aknast välja")
+                else if (telk6n1 == "ignoreeri")
                 {
-                    Console.WriteLine("*Hakkan telefoni aknast välja viskama, kuid viimasel hetkel mõtlen ümber ning vastan kõnele.*");
+                    Console.WriteLine("*Ignoreerin kõne, istun laua taha ja kuulan raadiost tulevaid jõululaule.*");
                     Console.ReadKey();
-                    Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
-                    Console.ResetColor();
-                    dialoog.Dia();
+                    while (true)
+                    {
+                        Console.WriteLine("*Telefon heliseb uuesti, lähen närvi.* 'vasta' või 'viskan telefoni aknast välja'");
+                        string telk6n2 = Console.ReadLine();
+                        Console.Clear();
+                        if (telk6n2 == "vasta")
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkCyan;
+                            Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                            Console.ResetColor();
+                            dialoog.Dia();
+                            break;
+                        }
+                        else if (telk6n2 == "viskan telefoni aknast välja")
+                        {
+                            Console.WriteLine("*Hakkan telefoni aknast välja viskama, kuid viimasel hetkel mõtlen ümber ning vastan kõnele.*");
+                            Console.ReadKey();
+                            Console.ForegroundColor = ConsoleColor.DarkCyan;
+                            Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                            Console.ResetColor();
+                            dialoog.Dia();
+                            break;
+                        }
+                    }
                 }
-                else
-                    goto telk6n2;
             }
-            else
-                goto telk6n1;
         }
     }
 }
