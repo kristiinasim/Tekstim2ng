@@ -12,7 +12,7 @@ namespace m2ng
         public static string path;
         public static string Inv()
         {
-            using (StreamReader sr = new StreamReader("../../../Invetory.txt"))
+            using (StreamReader sr = new StreamReader("../../info/Invetory.txt"))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)

@@ -70,10 +70,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="info\apteekseest.txt" />
+    <Content Include="info\apteekvaljast.txt" />
     <Content Include="info\aptjek.txt" />
     <Content Include="info\ascii.txt" />
+    <Content Include="info\Invetory.txt.txt" />
+    <Content Include="info\mega.txt" />
     <Content Include="info\pilt.txt" />
+    <Content Include="info\poodv.txt" />
     <Content Include="info\raha.txt" />
+    <Content Include="info\tubli.txt" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
