@@ -42,17 +42,17 @@ namespace m2ng
 
             
             
-            apteek.apt();
-            pood.poes();
+            apteek.apt(); //-DONE
+            pood.poes(); //-DONE
             apteek2.tagasi();
-            Hullumaja.hullumaja();
-            Koobas.Kooba();
-            lopp.Lopp();
-            dialoog.Dialo();
-            lennujaam.JooKohvi();
-            lennujaam.Lennujaam();
-            linna.linnas();
-            linna.linn();
+            Hullumaja.hullumaja(); //-DONE
+            Koobas.Kooba(); //-DONE
+            lopp.Lopp(); //-DONE
+            dialoog.Dialo(); //DONE
+            lennujaam.JooKohvi(); //-DONE
+            lennujaam.Lennujaam(); //-DONE
+            linna.linnas(); 
+            linna.linn(); //-DONE
         }
     }
     
