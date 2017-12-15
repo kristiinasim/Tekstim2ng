@@ -45,7 +45,7 @@ namespace m2ng
             apteek2.tagasi();
             Hullumaja.hullumaja();
             Koobas.Kooba();
-            ////TAGASI KÜLLA JA HULLUMAJJA
+            lopp.Lopp();
         }
     }
     

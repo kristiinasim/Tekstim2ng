@@ -277,7 +277,9 @@ namespace m2ng
             }
             else goto suund;
             koik:
+            Console.Clear();
             Console.WriteLine("*Õhk, vabadus on see mida ma tunnen! Ma leidsin tee koopast välja!*");
+            Console.ReadLine();
         }
 
         public static void S88()

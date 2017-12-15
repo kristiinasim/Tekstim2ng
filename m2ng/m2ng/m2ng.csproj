@@ -53,6 +53,7 @@
     <Compile Include="koobas.cs" />
     <Compile Include="KoobasFunc.cs" />
     <Compile Include="lennujaam.cs" />
+    <Compile Include="lopp.cs" />
     <Compile Include="pood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,7 +70,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="info\hullumaja.txt" />
     <Content Include="info\aptjek.txt" />
     <Content Include="info\ascii.txt" />
     <Content Include="info\pilt.txt" />
