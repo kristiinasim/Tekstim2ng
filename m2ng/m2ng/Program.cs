@@ -35,12 +35,12 @@ namespace m2ng
             Console.ReadKey();
             Console.Clear();
 
-            dialoog.Dialo();
-            lennujaam.JooKohvi();
-            lennujaam.Lennujaam();
-            linna.linnas();
-            linna.linn();
-            apteek.apt();
+            //dialoog.Dialo();
+            //lennujaam.JooKohvi();
+            //lennujaam.Lennujaam();
+            //linna.linnas();
+            //linna.linn();
+            //apteek.apt();
             pood.poes();
             apteek2.tagasi();
             Hullumaja.hullumaja();

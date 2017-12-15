@@ -99,13 +99,16 @@ namespace m2ng
             Console.WriteLine("(Sul on vaja säilitada 20 eurot rohtude jaoks!)");
             Console.ResetColor();
             Console.ReadKey();
-            osta:
+            var kasBreakin = false;
+            while (true)
+            {
+
             Console.WriteLine("'osta' või 'ei aitäh'");
             string osta = Console.ReadLine();
             Console.Clear();
             if (osta == "osta")
             {
-                ost:
+                
                 Console.WriteLine("*osta midagi neist:*");
                 Console.WriteLine("'1': šokolaad - 4 eurot");
                 Console.WriteLine("'2': pudel vett - 3 eurot");
@@ -165,45 +168,56 @@ namespace m2ng
                     else if (karakter.raha < 5)
                         karakter.Poleraha();
                 }
-                else goto ost;
-                veel:
-                Console.WriteLine("Soovite veel osta? 'jah' või 'ei'");
-                string vastu = Console.ReadLine();
-                Console.Clear();
-                if (vastu == "jah")
-                {
-                    if (karakter.raha >= 3)
-                        goto ost;
-                    else if (karakter.raha < 3)
+                else continue;
+                
+                    while (true)
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Sul ei ole piisavalt raha, et midagi osta!");
-                        Console.ResetColor();
+
+                        Console.WriteLine("Soovite veel osta? 'jah' või 'ei'");
+                        string vastu = Console.ReadLine();
+                        Console.Clear();
+                        if (vastu == "jah")
+                        {
+                            if (karakter.raha >= 3)
+                                break;
+                            else if (karakter.raha < 3)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Sul ei ole piisavalt raha, et midagi osta!");
+                                Console.ResetColor();
+                            }
+                        }
+                        else if (vastu == "ei")
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkCyan;
+                            Console.WriteLine("*Poeomanik*: Aitäh teile, olite suureks abiks!");
+                            Console.ResetColor();
+                            Console.ReadKey();
+                            Console.WriteLine("*Nüüd jääb üle vaid apteeki tagasi minna...*");
+                            Console.ReadKey();
+                            kasBreakin = true;
+                            break;
+                        }
+                        else continue;
                     }
-                }
-                else if (vastu == "ei")
+            }
+                else if (kasBreakin == true)
+                    break;
+               
+                else if (osta == "ei aitäh")
                 {
+                    Console.WriteLine("Ei aitäh, ma parem liigun edasi.");
+                    Console.ReadKey();
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.WriteLine("*Poeomanik*: Aitäh teile, olite suureks abiks!");
                     Console.ResetColor();
                     Console.ReadKey();
-                    Console.WriteLine("*Nüüd jääb üle vaid apteeki tagasi minna...*");
+                    Console.WriteLine("*Sead sammud tagasi apteegi poole..*");
                     Console.ReadKey();
+                    break;
                 }
-                else goto veel;
+                else continue;
             }
-            else if (osta == "ei aitäh")
-            {
-                Console.WriteLine("Ei aitäh, ma parem liigun edasi.");
-                Console.ReadKey();
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Poeomanik*: Aitäh teile, olite suureks abiks!");
-                Console.ResetColor();
-                Console.ReadKey();
-                Console.WriteLine("*Sead sammud tagasi apteegi poole..*");
-                Console.ReadKey();
-            }
-            else goto osta;
         }
     }
 }
