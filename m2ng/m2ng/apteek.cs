@@ -42,7 +42,7 @@ namespace m2ng
                 Console.WriteLine("Kas te oskate mulle nõu anda, mida ma tegema peaksin?");
                 Console.ReadKey();
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("*Apteeker:* Politseilt pole teil mõtet nõu küsida. Nad on liiga aeglased. Kuid minge vaadake tänaval ringi, minu teada on Linde'i poe omanikul praegu abikäsi vaja, ehk saate raha teenida.");
+                Console.WriteLine("*Apteeker:* Politseilt pole teil mõtet nõu küsida. Nad on liiga aeglased. Kuid minge vaadake tänaval ringi, minu teada on Anni poe omanikul praegu abikäsi vaja, ehk saate raha teenida.");
                 Console.ResetColor();
                 Console.ReadKey();
                 Console.WriteLine("Aitäh! Kust ma ta leida võiks?");
