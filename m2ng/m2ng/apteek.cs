@@ -74,7 +74,7 @@ namespace m2ng
                 Console.ReadKey();
                 string poodv = System.IO.File.ReadAllText(@"..\..\info\poodv.txt");
                 Console.WriteLine(poodv);
-                Console.WriteLine("*Astun sise.*");
+                Console.WriteLine("*Astun sisse.*");
                 Console.ReadKey();
                 Console.Clear();
             }
