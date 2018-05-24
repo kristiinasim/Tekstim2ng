@@ -9,7 +9,10 @@ namespace m2ng
 {
     class Invetuur
     {
-        public static string path;
+        /// <summary>
+        /// Seljakoti sisu.
+        /// </summary>
+        /// <returns></returns>
         public static string Inv()
         {
             using (StreamReader sr = new StreamReader("../../info/Invetory.txt"))
@@ -22,8 +25,9 @@ namespace m2ng
                 return line;
             }
         }
-
-
+        /// <summary>
+        /// Loetleb seljakoti sisu.
+        /// </summary>
         public static void Invcheck()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;

@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class linna
+    class Linna
     {
-        public static void linnas()
+        /// <summary>
+        /// Üritad linnas teed leida.
+        /// </summary>
+        public static void Linnas()
         {
             Console.WriteLine("*Vaatan ringi:* Kas kuskil võiks olla keegigi, kes mind apteeki juhatada oskaks?");
             Console.ReadKey();
@@ -78,14 +81,12 @@ namespace m2ng
             {
                 Console.WriteLine("*Näha on üks lonkav vanainimene.* Kas 'kõnnin mööda' või 'küsin abi'?");
                 var valik2 = Console.ReadLine();
-
                 if (valik2 == "kõnnin mööda")
                 {
                     Console.WriteLine("Hmm, ma ei usu, et tema mind aidata oskab. Vaatan edasi!");
                     Console.ReadKey();
                     Console.Clear();
                     break;
-
                 }
                 else if (valik2 == "küsin abi")
                 {
@@ -169,10 +170,10 @@ namespace m2ng
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Vihmavari vähendas su HP kolme võrra.");
                             Console.ResetColor();
-                            karakter.HP -= 3;
+                            Karakter.HP -= 3;
                             Console.ReadKey();
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine("Sinu HP on: " + karakter.HP);
+                            Console.WriteLine("Sinu HP on: " + Karakter.HP);
                             Console.ResetColor();
                             Console.ReadLine();
                             Console.WriteLine("*Kõnnin lihtsalt edasi. Kuskile pean ju ikka välja jõudma.*");
@@ -218,8 +219,10 @@ namespace m2ng
                 }
             }
         }
-
-        public static void linn()
+        /// <summary>
+        /// Üritad jätkuvalt teed leida.
+        /// </summary>
+        public static void Linn()
         {
             while (true)
             {
@@ -250,20 +253,16 @@ namespace m2ng
                     Console.ReadKey();
                     Console.WriteLine("Aitäh!");
                     break;
-
                 }
                 else
                 {
                     continue;
                 }
-
             }
-
             Console.ReadKey();
             Console.WriteLine("*Mõne aja pärast:*Hmm, olen kõndinud nii paremale kui ka edasi, kuid maja pole näha. Ehk peaksin korra veel küsida proovima?");
             Console.ReadKey();
             Console.Clear();
-
 
             while (true)
             {
@@ -284,6 +283,7 @@ namespace m2ng
                     Console.ReadKey();
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.WriteLine("*Mees:* Pole hullu, head päeva!");
+                    Console.ReadKey();
                     Console.ResetColor();
                     break;
 
@@ -295,7 +295,9 @@ namespace m2ng
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.WriteLine("*Nooruk:* Jah, see on kohe siin nurga taga! Paljud turistid ei leia seda kohe üles.");
                     Console.ResetColor();
+                    Console.ReadKey();
                     Console.WriteLine("Oh, kas tõesti! Olen juba 15 minutit siin ringi käinud. Aitäh!");
+                    Console.ReadKey();
                     break;
                 }
                 else
@@ -303,12 +305,11 @@ namespace m2ng
                     continue;
                 }
             }
-                Console.Clear();
-                string apteekvaljast = System.IO.File.ReadAllText(@"..\..\info\apteekvaljast.txt");
-                Console.WriteLine(apteekvaljast);
-                Console.WriteLine("*Peale pikka jalutuskäiku jõunagi lõpuks apteeki. Ma ei suuda uskuda, et seda varem üles ei leidnud, kuid mis siis ikka! Nüüd jääb üle vaid veel rohi osta.*");
-                Console.ReadKey();
-            
+            Console.Clear();
+            string apteekvaljast = System.IO.File.ReadAllText(@"..\..\info\apteekvaljast.txt");
+            Console.WriteLine(apteekvaljast);
+            Console.WriteLine("*Peale pikka jalutuskäiku jõunagi lõpuks apteeki. Ma ei suuda uskuda, et seda varem üles ei leidnud, kuid mis siis ikka! Nüüd jääb üle vaid veel rohi osta.*");
+            Console.ReadKey();
         }
     }
 }

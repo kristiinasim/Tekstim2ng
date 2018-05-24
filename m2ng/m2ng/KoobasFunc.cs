@@ -8,15 +8,20 @@ namespace m2ng
 {
     class KoobasFunc
     {
+        /// <summary>
+        /// Koopas tuleb vastu rott.
+        /// </summary>
         public static void Rott()
         {
-
+            ///
             Console.WriteLine("Näed koopas liikumas rotti.");
             Console.ReadKey();
             Console.WriteLine("Üritad rotti jälitada, kuid ta paneb plehku.");
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Koopas tuleb vastu rott, kes juhatab su välja.
+        /// </summary>
         public static void RottValja()
         {
             Console.WriteLine("Näed koopas liikumas rotti. Ta laseb sul endale järgi jõuda.");
@@ -24,7 +29,9 @@ namespace m2ng
             Console.WriteLine("Rotti jälitades leiad sa tee koopast välja!");
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Koopas on politsei, kelle eest õnnestub sul põgeneda.
+        /// </summary>
         public static void PolitseiLucky()
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -34,47 +41,53 @@ namespace m2ng
             Console.ReadKey();
             Console.ResetColor();
         }
-
+        /// <summary>
+        /// Koopas on politsei, kellega sa kokku jooksed.
+        /// </summary>
         public static void Politsei()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Koopas on politsei ja ta nägi sind!");
-            Politsei:
-            Console.WriteLine("Sul on kaks valikut: 'jookse' või 'võitle'");
-            Console.ResetColor();
-            string Politsei = Console.ReadLine();
-            if (Politsei == "jookse")
+            while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Otsustasid joosta.");
-                Console.ReadKey();
-                Console.WriteLine("Peidad ennast koopanurga pimeduses, politsei möödub sinust, sind mitte märgates.");
-                Console.ReadKey();
-                Console.WriteLine("Peidad ennast veel natukene aega igaks juhuks ning siis liigud edasi.");
+                Console.WriteLine("Sul on kaks valikut: 'jookse' või 'võitle'");
                 Console.ResetColor();
-                Console.ReadKey();
+                string Politsei = Console.ReadLine();
+                if (Politsei == "jookse")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Otsustasid joosta.");
+                    Console.ReadKey();
+                    Console.WriteLine("Peidad ennast koopanurga pimeduses, politsei möödub sinust, sind mitte märgates.");
+                    Console.ReadKey();
+                    Console.WriteLine("Peidad ennast veel natukene aega igaks juhuks ning siis liigud edasi.");
+                    Console.ResetColor();
+                    break;
+                }
+                else if (Politsei == "võitle")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Hakkad liikuma politsei poole, et võidelda.");
+                    Console.ReadKey();
+                    Console.WriteLine("Politsei tõstab taskust relva, seda märgates otsustad sedamaid põgeneda.");
+                    Console.ReadKey();
+                    Console.WriteLine("Peidad ennast koopanurga pimeduses, politsei möödub sinust, sind mitte märgates.");
+                    Console.ReadKey();
+                    Console.WriteLine("Peidad ennast veel natukene aega igaks juhuks ning siis liigud edasi.");
+                    Console.ResetColor();
+                    break;
+                }
+                else continue;
             }
-            else if (Politsei == "võitle")
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Hakkad liikuma politsei poole, et võidelda.");
-                Console.ReadKey();
-                Console.WriteLine("Politsei tõstab taskust relva, seda märgates otsustad sedamaid põgeneda.");
-                Console.ReadKey();
-                Console.WriteLine("Peidad ennast koopanurga pimeduses, politsei möödub sinust, sind mitte märgates.");
-                Console.ReadKey();
-                Console.WriteLine("Peidad ennast veel natukene aega igaks juhuks ning siis liigud edasi.");
-                Console.ResetColor();
-                Console.ReadKey();
-            }
-            else goto Politsei;
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Kaotasid mängu.
+        /// </summary>
         public static void MangLabi()
         {
             Console.WriteLine("Kaotasid mängu!");
-            karakter.Kaotasid();
+            Karakter.Kaotasid();
             Environment.Exit(0);
         }
     }

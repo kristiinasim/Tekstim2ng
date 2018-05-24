@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class apteek2
+    class Apteek2
     {
         public static string path;
-        public static void tagasi()
+        /// <summary>
+        /// Teine külastus apteeki.
+        /// </summary>
+        public static void Tagasi()
         {
             path = @"../../info/Invetory.txt";
             Console.Clear();
@@ -22,12 +25,11 @@ namespace m2ng
             Console.WriteLine("*Apteeker*: See läheb siis jätkuvalt maksma 20 eurot.");
             Console.ReadKey();
             Console.ResetColor();
-            karakter.Rahacheck();
+            Karakter.Rahacheck();
             Console.ReadKey();
-
-            if (karakter.raha >= 20)
+            if (Karakter.Raha >= 20)
             {
-                karakter.raha -= 20;
+                Karakter.Raha -= 20;
                 Console.WriteLine("Siin on raha. *ulatad raha apteekrile.*");
                 Console.ReadKey();
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -38,10 +40,10 @@ namespace m2ng
                 File.AppendAllText(path, tekst);
                 Invetuur.Invcheck();
             }
-            else if (karakter.raha < 20)
+            else if (Karakter.Raha < 20)
             {
                 Console.WriteLine("Teil ei ole piisavalt raha, et rohtu osta, seega on mäng läbi!");
-                karakter.Kaotasid();
+                Karakter.Kaotasid();
             }
             Console.ReadKey();
             Console.WriteLine("Aitäh! Kas oskate mulle öelda, kuhu jääb Ruhtle psühhiaatrikliinik?");
@@ -50,13 +52,11 @@ namespace m2ng
             Console.WriteLine("*Apteeker:* Oh, see on kohe siit üle tee ning vasakule!");
             Console.ReadKey();
             Console.ResetColor();
-
             while (true)
             {
                 Console.WriteLine("Kas 'tänan viisakalt' või 'jooksen välja'?");
                 var valik9 = Console.ReadLine();
                 Console.Clear();
-
                 if (valik9 == "tänan viisakalt")
                 {
                     Console.WriteLine("Suur aitäh teile ja nägemist!");

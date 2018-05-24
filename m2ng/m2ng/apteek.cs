@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class apteek
+    class Apteek
     {
-        public static void apt()
+        /// <summary>
+        /// Külastus apteeki.
+        /// </summary>
+        public static void Apt()
         {
             Console.Clear();
             string apteekseest = System.IO.File.ReadAllText(@"..\..\info\apteekseest.txt");
@@ -36,9 +39,7 @@ namespace m2ng
             while (true)
             {
                 Console.WriteLine("'küsin nõu' või 'lähen ära'");
-                
-
-                    var valik6 = Console.ReadLine().ToLower();
+                var valik6 = Console.ReadLine().ToLower();
                 Console.Clear();
                 if (valik6 == "küsin nõu")
                 {
@@ -56,11 +57,14 @@ namespace m2ng
                     Console.ReadKey();
                     Console.WriteLine("Aitäh! Näeme veel!");
                     Console.ReadKey();
-                    Console.WriteLine("*Mõnda aega kõndides jõuangi lilledega kaunistatud poeni. Astun sisse.*");
+                    Console.WriteLine("*Mõnda aega kõndides jõuangi lilledega kaunistatud poeni.*");
+                    Console.ReadKey();
+                    string poodv = System.IO.File.ReadAllText(@"..\..\info\poodv.txt");
+                    Console.WriteLine(poodv);
+                    Console.WriteLine("*Astun sisse.*");
                     Console.ReadKey();
                     break;
                 }
-
                 else if (valik6 == "lähen ära")
                 {
                     Console.WriteLine("*Kõnnin aeglaselt apteekist välja* Nüüd pean mõtlema, mis edasi teha.");
@@ -88,9 +92,6 @@ namespace m2ng
                 {
                     continue;
                 }
-
-                
-
             }
         }
     }

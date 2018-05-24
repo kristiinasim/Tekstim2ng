@@ -44,22 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="apteek.cs" />
-    <Compile Include="apteek2.cs" />
-    <Compile Include="dialoog.cs" />
+    <Compile Include="Apteek.cs" />
+    <Compile Include="Apteek2.cs" />
+    <Compile Include="Dialoog.cs" />
     <Compile Include="Hullumaja.cs" />
     <Compile Include="Invetuur.cs" />
-    <Compile Include="karakter.cs" />
-    <Compile Include="koobas.cs" />
+    <Compile Include="Karakter.cs" />
+    <Compile Include="Koobas.cs" />
     <Compile Include="KoobasFunc.cs" />
-    <Compile Include="lennujaam.cs" />
-    <Compile Include="lopp.cs" />
-    <Compile Include="pood.cs" />
+    <Compile Include="Lennujaam.cs" />
+    <Compile Include="Lopp.cs" />
+    <Compile Include="Pood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="raha.cs" />
-    <Compile Include="TextFile.cs" />
-    <Compile Include="linna.cs" />
+    <Compile Include="Linna.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
