@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         {
 
             Process p = new Process();
-            Process.Start(@"C:../../../../../../m2ng.exe");
+            Process.Start(@"D:\#Games and Apps\GITHUB\Tekstim2ng\m2ng.exe");
             this.Close();
 
         }

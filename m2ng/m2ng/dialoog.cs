@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class dialoog
+    class Dialoog
     {
-        
+        /// <summary>
+        /// Sissejuhatus mängu.
+        /// </summary>
         public static void Dia()
         {
 
@@ -27,10 +29,12 @@ namespace m2ng
             Console.ResetColor();
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Karakteri nime, vanuse ja soo määramine ning mängu sissejuhatuse algus.
+        /// </summary>
         public static void Dialo()
         {
-            karakter kasutaja = new karakter();
+            Karakter kasutaja = new Karakter();
 
             var kysimus = "";
             do
@@ -41,17 +45,17 @@ namespace m2ng
                 kysimus = Console.ReadLine();
             } while (kysimus.Length < 3);
 
-            kasutaja.nimi = kysimus;
+            kasutaja.Nimi = kysimus;
 
             var vanus = 0;
             do
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Tere {0}. Sisestage palun oma vanus.", kasutaja.nimi);
+                Console.WriteLine("Tere {0}. Sisestage palun oma vanus.", kasutaja.Nimi);
                 Console.ResetColor();
                 kysimus = Console.ReadLine();
             } while (!int.TryParse(kysimus, out vanus));
-            kasutaja.vanus = vanus;
+            kasutaja.Vanus = vanus;
             //Console.WriteLine("Rõõm tutvuda sinuga {0} aastane {1}.", kasutaja.vanus, kasutaja.nimi);
             do
             {
@@ -61,7 +65,7 @@ namespace m2ng
                 kysimus = Console.ReadLine();
             } while (kysimus.ToLower() != "naine" && kysimus.ToLower() != "mees");
 
-            kasutaja.sugu = kysimus.ToLower();
+            kasutaja.Sugu = kysimus.ToLower();
 
             Console.Clear();
             //Ekraan.Tervitus();
@@ -75,13 +79,12 @@ namespace m2ng
                 Console.WriteLine("*Telefon heliseb uuesti.* 'vasta' või 'ignoreeri'");
                 string telk6n1 = Console.ReadLine();
                 Console.Clear();
-
                 if (telk6n1 == "vasta")
                 {
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                    Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.Nimi + "?");
                     Console.ResetColor();
-                    dialoog.Dia();
+                    Dialoog.Dia();
                     break;
                 }
                 else if (telk6n1 == "ignoreeri")
@@ -96,9 +99,9 @@ namespace m2ng
                         if (telk6n2 == "vasta")
                         {
                             Console.ForegroundColor = ConsoleColor.DarkCyan;
-                            Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                            Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.Nimi + "?");
                             Console.ResetColor();
-                            dialoog.Dia();
+                            Dialoog.Dia();
                             break;
                         }
                         else if (telk6n2 == "viskan telefoni aknast välja")
@@ -106,13 +109,16 @@ namespace m2ng
                             Console.WriteLine("*Hakkan telefoni aknast välja viskama, kuid viimasel hetkel mõtlen ümber ning vastan kõnele.*");
                             Console.ReadKey();
                             Console.ForegroundColor = ConsoleColor.DarkCyan;
-                            Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.nimi + "?");
+                            Console.WriteLine("*Helistaja*: Tere, kas teie olete " + kasutaja.Nimi + "?");
                             Console.ResetColor();
-                            dialoog.Dia();
+                            Dialoog.Dia();
                             break;
                         }
+                        else continue;
                     }
+                    break;
                 }
+                else continue;
             }
         }
     }

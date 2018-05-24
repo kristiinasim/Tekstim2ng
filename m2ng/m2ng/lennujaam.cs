@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class lennujaam
+    class Lennujaam
     {
-        public static void Lennujaam()
+        /// <summary>
+        /// Jõuad lennujaama.
+        /// </summary>
+        public static void Lennujaamm()
         {
             Console.WriteLine("*Pakin kiiresti oma kohvri kokku ning sean sammud lennujaama poole.*");
             Console.ReadKey();
@@ -20,11 +23,13 @@ namespace m2ng
             Console.WriteLine("*Lõpuks lennukilt maas, lennujaamas, kell on 12:27, nüüd on vaja leida apteek, osta rohi ja minna kaksikule külla. Mis saab valesti minna?");
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Valik, kas juua kohvi või ei.
+        /// </summary>
         public static void JooKohvi()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Hetkene stamina: " + karakter.stamina);
+            Console.WriteLine("Hetkene stamina: " + Karakter.Stamina);
             Console.ResetColor();
             while (true)
             {
@@ -33,9 +38,9 @@ namespace m2ng
                 if (jookohvi == "jah")
                 {
                     Console.WriteLine("Jood kiiresti tassi kohvi ja saad juurde +50 staminat.");
-                    karakter.stamina += 50;
+                    Karakter.Stamina += 50;
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Hetkene stamina: " + karakter.stamina);
+                    Console.WriteLine("Hetkene stamina: " + Karakter.Stamina);
                     Console.ResetColor();
                     break;
                 }
@@ -44,7 +49,6 @@ namespace m2ng
                     Console.WriteLine("Jätad hommikuse kohvi joomata.");
                     break;
                 }
-
                 else
                 {
                     continue;

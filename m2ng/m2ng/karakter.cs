@@ -7,44 +7,54 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class karakter
+    class Karakter
     {
-        public karakter()
+        /// <summary>
+        /// Loob karakteri statistika.
+        /// </summary>
+        public Karakter()
         {
             HP = 100;
             EnemyHP = 40;
-            raha = 0;
+            Raha = 0;
         }
-        public string nimi { get; set; }
-
-        public int vanus { get; set; }
-        public string sugu { get; set; }
-        public static int stamina { get; set; }
-        public static int raha { get; set; }
+        public string Nimi { get; set; }
+        public int Vanus { get; set; }
+        public string Sugu { get; set; }
+        public static int Stamina { get; set; }
+        public static int Raha { get; set; }
         public static int HP { get; set; }
         public static int EnemyHP { get; set; }
+        /// <summary>
+        /// Näitab karakteri hetkest staminat.
+        /// </summary>
         public static void Staminacheck()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Hetkene stamina: " + karakter.stamina);
+            Console.WriteLine("Hetkene stamina: " + Karakter.Stamina);
             Console.ResetColor();
         }
-
-
+        /// <summary>
+        /// Näitab raha summat.
+        /// </summary>
         public static void Rahacheck()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Sul on raha: " + karakter.raha);
+            Console.WriteLine("Sul on raha: " + Karakter.Raha);
             Console.ResetColor();
         }
-
+        /// <summary>
+        /// Raha puudub millegi ostmiseks.
+        /// </summary>
         public static void Poleraha()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Sul ei ole piisavalt raha, et seda osta!");
             Console.ResetColor();
         }
-
+        /// <summary>
+        /// Kaotasid mängu.
+        /// </summary>
         public static void Kaotasid()
         {
             Console.ReadKey();
@@ -56,7 +66,9 @@ namespace m2ng
             Console.WriteLine(mang);
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Võitsid mängu.
+        /// </summary>
         public static void Voitsid()
         {
             Console.ReadKey();

@@ -14,11 +14,8 @@ namespace m2ng
         public static string path;
         static void Main(string[] args)
         {
-
             //////Mäng järjekorras--
-
-
-            karakter kasutaja = new karakter();
+            Karakter kasutaja = new Karakter();
             path = @"../../info/Invetory.txt";
             File.Delete(path);
             string tekst = " ";
@@ -36,17 +33,17 @@ namespace m2ng
             Console.ReadKey();
             Console.Clear();
 
-            dialoog.Dialo();
-            lennujaam.JooKohvi();
-            lennujaam.Lennujaam();
-            linna.linnas();
-            linna.linn();
-            apteek.apt();
-            pood.poes();
-            apteek2.tagasi();
-            Hullumaja.hullumaja();
+            Dialoog.Dialo();
+            Lennujaam.JooKohvi();
+            Lennujaam.Lennujaamm();
+            Linna.Linnas();
+            Linna.Linn();
+            Apteek.Apt();
+            Pood.Poes();
+            Apteek2.Tagasi();
+            Hullumaja.Hullumajaa();
             Koobas.Kooba();
-            lopp.Lopp();
+            Lopp.Loppp();
         }
     }
 }

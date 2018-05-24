@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace m2ng
 {
-    class Koobas:karakter
+    class Koobas:Karakter
     {
         public static string path;
         //9 toitu. 4 vett, 2 sokolaadi, 2 pakki kypsist, 1 coca cola
+        /// <summary>
+        /// Leiad maast veepudeli, võimalus kas üles korjata või maja jätta.
+        /// </summary>
         public static void Vesi()
         {
             while (true)
@@ -33,6 +36,9 @@ namespace m2ng
             }
             Console.ReadKey();
         }
+        /// <summary>
+        /// Leiad maast šokolaadi, võimalus kas üles korjata või maja jätta.
+        /// </summary>
         public static void Sokolaad()
         {
             while (true)
@@ -56,6 +62,9 @@ namespace m2ng
             }
             Console.ReadKey();
         }
+        /// <summary>
+        /// Leiad maast küpsisepaki, võimalus kas üles korjata või maja jätta.
+        /// </summary>
         public static void Kypsisepakk()
         {
             while (true)
@@ -79,6 +88,9 @@ namespace m2ng
             }
             Console.ReadKey();
         }
+        /// <summary>
+        /// Leiad maast coca pudeli, võimalus kas üles korjata või maja jätta.
+        /// </summary>
         public static void Coca()
         {
             while (true)
@@ -103,6 +115,9 @@ namespace m2ng
             Console.ReadKey();
         }
         //--KOOBAS--
+        /// <summary>
+        /// Seiklemine koopas, kuhu sattusid läbi kanalisatsiooni.
+        /// </summary>
         public static void Kooba()
         {
             path = @"../../info/Invetory.txt";
@@ -355,9 +370,11 @@ namespace m2ng
             }
             Console.Clear();
             Console.WriteLine("*Õhk, vabadus on see mida ma tunnen! Ma leidsin tee koopast välja!*");
-            Console.ReadLine();
+            Console.ReadKey();
         }
-
+        /// <summary>
+        /// Kui stamina otsa saab, siis on võimalus süüa, et see taastada.
+        /// </summary>
         public static void S88()
         {
             path = @"../../info/Invetory.txt";
@@ -402,7 +419,7 @@ namespace m2ng
                             {
                                 Console.WriteLine("Said selle toidu/joogi söömise/joomise eest +30 staminat!");
                                 Console.ReadKey();
-                                karakter.stamina += 30;
+                                Karakter.Stamina += 30;
                                 string text = File.ReadAllText(path);
                                 text = text.Replace(s88k, " ");
                                 File.WriteAllText(path, text);
@@ -415,7 +432,7 @@ namespace m2ng
                         }
                     }
                     Invetuur.Invcheck();
-                    karakter.Staminacheck();
+                    Karakter.Staminacheck();
                 }
 
                 else if (onmidagi == "ei")
@@ -430,106 +447,116 @@ namespace m2ng
             }
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Ründad vastast lüües teda pähe.
+        /// </summary>
         public static void Pahe()
         {
-            if (karakter.stamina >= 30)
+            if (Karakter.Stamina >= 30)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                karakter.stamina -= 30;
-                Console.WriteLine("Vastase HP on: " + karakter.EnemyHP);
-                karakter.EnemyHP -= 30;
+                Karakter.Stamina -= 30;
+                Console.WriteLine("Vastase HP on: " + Karakter.EnemyHP);
+                Karakter.EnemyHP -= 30;
                 Console.WriteLine("Lõid teda pähe ja ta HP vähenes 30 võrra.");
-                Console.WriteLine("Tema HP on: " + karakter.EnemyHP);
+                Console.WriteLine("Tema HP on: " + Karakter.EnemyHP);
                 Console.ResetColor();
             }
-            else if (karakter.stamina < 30)
+            else if (Karakter.Stamina < 30)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Staminat ei ole piisavalt, et seda käiku teha.");
                 Console.WriteLine("Söö midagi seljakotist või on mäng läbi!");
                 Console.ResetColor();
                 S88();
-                if (karakter.stamina >= 30)
+                if (Karakter.Stamina >= 30)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    karakter.stamina -= 30;
-                    Console.WriteLine("Vastase HP on: " + karakter.EnemyHP);
-                    karakter.EnemyHP -= 30;
+                    Karakter.Stamina -= 30;
+                    Console.WriteLine("Vastase HP on: " + Karakter.EnemyHP);
+                    Karakter.EnemyHP -= 30;
                     Console.WriteLine("Lõid teda pähe ja ta HP vähenes 30 võrra.");
-                    Console.WriteLine("Tema HP on: " + karakter.EnemyHP);
+                    Console.WriteLine("Tema HP on: " + Karakter.EnemyHP);
                     Console.ResetColor();
                 }
-                else if (karakter.stamina < 30)
+                else if (Karakter.Stamina < 30)
                 {
                     KoobasFunc.MangLabi();
                 }
             }
         }
-
+        /// <summary>
+        /// Ründad vastast lüües teda kõhtu.
+        /// </summary>
         public static void Kohtu()
         {
-            if (karakter.stamina >= 20)
+            if (Karakter.Stamina >= 20)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                karakter.stamina -= 20;
-                Console.WriteLine("Vastase HP on: " + karakter.EnemyHP);
-                karakter.EnemyHP -= 20;
+                Karakter.Stamina -= 20;
+                Console.WriteLine("Vastase HP on: " + Karakter.EnemyHP);
+                Karakter.EnemyHP -= 20;
                 Console.WriteLine("Lõid teda pähe ja ta HP vähenes 20 võrra.");
-                Console.WriteLine("Tema HP on: " + karakter.EnemyHP);
+                Console.WriteLine("Tema HP on: " + Karakter.EnemyHP);
                 Console.ResetColor();
             }
-            else if (karakter.stamina < 20)
+            else if (Karakter.Stamina < 20)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Staminat ei ole piisavalt, et seda käiku teha.");
                 Console.WriteLine("Söö midagi seljakotist või on mäng läbi!");
                 Console.ResetColor();
                 S88();
-                if (karakter.stamina >= 20)
+                if (Karakter.Stamina >= 20)
                 {
-                    karakter.stamina -= 20;
+                    Karakter.Stamina -= 20;
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Vastase HP on: " + karakter.EnemyHP);
-                    karakter.EnemyHP -= 20;
+                    Console.WriteLine("Vastase HP on: " + Karakter.EnemyHP);
+                    Karakter.EnemyHP -= 20;
                     Console.WriteLine("Lõid teda pähe ja ta HP vähenes 20 võrra.");
-                    Console.WriteLine("Tema HP on: " + karakter.EnemyHP);
+                    Console.WriteLine("Tema HP on: " + Karakter.EnemyHP);
                     Console.ResetColor();
                 }
-                else if (karakter.stamina < 20)
+                else if (Karakter.Stamina < 20)
                 {
                     KoobasFunc.MangLabi();
                 }
             }
         }
-
+        /// <summary>
+        /// Koopaelanik ründab sind, pead teda alistama.
+        /// </summary>
         public static void Ryne()
         {
-            karakter vaenlane = new karakter();
+            //Vaenlasele tuleb teha eraldi class, sest hetkesel juhul ta
+            //resetib ka karacteri HP.
+            Karakter vaenlane = new Karakter();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Koopaelanik tuleb kallale!");
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Lööd 'pähe'(-30 staminat) või 'kõhtu'(-20 staminat)");
                 Console.ResetColor();
                 string vas1 = Console.ReadLine();
                 if (vas1 == "pähe")
                 {
                     Pahe();
-                    karakter.Staminacheck();
-                    if (karakter.EnemyHP > 0)
+                    Karakter.Staminacheck();
+                    if (Karakter.EnemyHP > 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Vastane on uimane, saad uuesti lüüa!");
                         while (true)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Lööd 'pähe'(-30 staminat) või 'kõhtu'(-20 staminat)");
                             Console.ResetColor();
                             string vas2 = Console.ReadLine();
                             if (vas2 == "pähe")
                             {
                                 Pahe();
-                                karakter.Staminacheck();
+                                Karakter.Staminacheck();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                                 Console.ResetColor();
@@ -538,7 +565,7 @@ namespace m2ng
                             else if (vas2 == "kõhtu")
                             {
                                 Kohtu();
-                                karakter.Staminacheck();
+                                Karakter.Staminacheck();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                                 Console.ResetColor();
@@ -555,24 +582,25 @@ namespace m2ng
                 else if (vas1 == "kõhtu")
                 {
                     Kohtu();
-                    karakter.Staminacheck();
-                    if (karakter.EnemyHP > 0)
+                    Karakter.Staminacheck();
+                    if (Karakter.EnemyHP > 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Vastane taastub sellest kiiresti ja lööb sind õlga. Kaotad 14 HP.");
-                        karakter.HP -= 14;
+                        Karakter.HP -= 14;
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Sinu HP on: " + karakter.HP);
+                        Console.WriteLine("Sinu HP on: " + Karakter.HP);
                         Console.ForegroundColor = ConsoleColor.Red;
                         while (true)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Lööd 'pähe'(-30 staminat) või 'kõhtu'(-20 staminat)");
                             Console.ResetColor();
                             string vas3 = Console.ReadLine();
                             if (vas3 == "pähe")
                             {
                                 Pahe();
-                                karakter.Staminacheck();
+                                Karakter.Staminacheck();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                                 Console.ResetColor();
@@ -581,7 +609,7 @@ namespace m2ng
                             else if (vas3 == "kõhtu")
                             {
                                 Kohtu();
-                                karakter.Staminacheck();
+                                Karakter.Staminacheck();
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Vastane on alistatud! Liigud edasi nagu midagi poleks juhtunud.");
                                 Console.ResetColor();
